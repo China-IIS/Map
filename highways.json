@@ -1,0 +1,122 @@
+[
+    {
+        "name": "+X 直角公路",
+        "state": "main_axis_paved",
+        "from": [0, 0],
+        "to": [200000, 0]
+    },
+    {
+        "name": "+X 直角公路",
+        "state": "main_axis_dug_narrow",
+        "from": [200000, 0],
+        "to": [1500000, 0]
+    },
+    {
+        "name": "-X 直角公路",
+        "state": "main_axis_paved",
+        "from": [0, 0],
+        "to": [-200000, 0]
+    },
+    {
+        "name": "-Z 直角公路",
+        "state": "main_axis_paved",
+        "from": [0, 0],
+        "to": [0, -200000]
+    },
+    {
+        "name": "+Z 直角公路",
+        "state": "main_axis_paved",
+        "from": [0, 0],
+        "to": [0, 200000]
+    },
+    {
+        "name": "+Z 直角公路",
+        "state": "main_axis_dug_narrow",
+        "from": [0, 200000],
+        "to": [0, 1000000]
+    },
+    {
+        "name": "+XZ 对角线公路",
+        "state": "diagonal_paved",
+        "from": [0, 0],
+        "to": [44000, 44000]
+    },
+    {
+        "name": "+XZ 对角线公路",
+        "state": "diagonal_dug_wide",
+        "from": [44000, 44000],
+        "to": [940000, 940000]
+    },
+    {
+        "name": "-XZ 对角线公路",
+        "state": "diagonal_paved",
+        "from": [0, 0],
+        "to": [-22000, -22000]
+    },
+    {
+        "name": "-XZ 对角线公路",
+        "state": "diagonal_dug_wide",
+        "from": [-22000, -22000],
+        "to": [-30000, -30000]
+    },
+    {
+        "name": "-X +Z 对角线公路",
+        "state": "diagonal_paved",
+        "from": [0, 0],
+        "to": [-10000, 10000]
+    },
+    {
+        "name": "+X -Z 对角线公路",
+        "state": "diagonal_paved",
+        "from": [0, 0],
+        "to": [10000, -10000]
+    },
+    {
+        "name": "10K 直角环线 Leg 1",
+        "state": "main_axis_paved",
+        "from": [0, 10000],
+        "to": [10000, 10000]
+    },
+    {
+        "name": "10K 直角环线 Leg 2",
+        "state": "main_axis_paved",
+        "from": [10000, 10000],
+        "to": [10000, 0]
+    },
+    {
+        "name": "10K 直角环线 Leg 3",
+        "state": "main_axis_paved",
+        "from": [10000, 0],
+        "to": [10000, -10000]
+    },
+    {
+        "name": "10K 直角环线 Leg 4",
+        "state": "main_axis_paved",
+        "from": [10000, -10000],
+        "to": [0, -10000]
+    },
+    {
+        "name": "10K 直角环线 Leg 5",
+        "state": "main_axis_paved",
+        "from": [0, -10000],
+        "to": [-10000, -10000]
+    },
+    {
+        "name": "10K 直角环线 Leg 6",
+        "state": "main_axis_paved",
+        "from": [-10000, -10000],
+        "to": [-10000, 0]
+    },
+    {
+        "name": "10K 直角环线 Leg 7",
+        "state": "main_axis_paved",
+        "from": [-10000, 0],
+        "to": [-10000, 10000]
+    },
+    {
+        "name": "10K 直角环线 Leg 1",
+        "state": "main_axis_paved",
+        "from": [-10000, 10000],
+        "to": [0, 10000]
+    }
+]

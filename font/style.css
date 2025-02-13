@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mayak';
+    src: local('Mayak Extended Bold'), local('Mayak-Extended-Bold'),
+        url('Mayak-ExtendedBold.woff2') format('woff2'),
+        url('Mayak-ExtendedBold.woff') format('woff'),
+        url('Mayak-ExtendedBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

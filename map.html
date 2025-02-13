@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="The 2b2t group that builds and maintains the nether highways.">
+    <meta name="keywords" content="2b2t, minecraft, group, highway, nether, hwu, meg, mcg, iis">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:title" content="The Independent Interstate Society - Map" />
+    <meta property="og:description" content="The 2b2t group that builds and maintains the nether highways." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://highways2b2t.xin/" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#BF1E2E">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="googlebot" content="notranslate">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font/style.css">
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="map.js"></script>
+    <script src="script.js"></script>
+    <title>Map - ChinaIIS</title>
+</head>
+<body style="overflow: hidden;">
+    <div class="main" style="overflow: hidden;">
+        <div class="navbar" id="navbar">
+            <a class="navbar-logo-link" href="index.html">
+                <img class="navbar-logo" src="navbar_logo.png">
+            </a>
+            <div style="border-color: transparent;" class="navbar-button-border icon" id="bars-border">
+                <img src="bars.svg" class="navbar-button icon" id="navbar-bars">
+            </div>
+            <div class="navbar-buttons">
+                <div class="navbar-button-border">
+                    <a href="map.html" class="navbar-button selected">Map</a>
+                </div>
+                <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button">Discord</a>
+		<!-- <a href="stats.html" class="navbar-button">Statistics</a> -->
+                <a href="projects.html" class="navbar-button">Projects</a>
+            </div>
+        </div>
+        <div class="page">
+            <img class="background-image" src="background_fx.jpg" alt="" srcset="">
+            <div class="page-heading padded">
+                <div class="page-heading-text">
+                    MAP
+                </div>
+            </div>
+            <div class="map-viewport" id="viewport">
+                <canvas class="map-canvas" id="canvas" width="1280" height="720">Your browser doesn't support Canvas 2D :'(</canvas>
+                <div class="map-info" id="info" style="display: none;">
+                    <img id="info-close" class="map-info-close" src="xmark-solid.svg">
+                    <div class="map-info-title">
+                        <div class="map-info-marker" id="marker-icon"></div>
+                        <div class="map-info-highway" id="hwicon" style="--color: hsl(9deg, 85%, 40%)" style="display: none;" id="highway-icon">
+                            <div class="hwicon-back-x"></div>
+                            <div class="hwicon-back-z"></div>
+                            <div class="hwicon-front-x"></div>
+                            <div class="hwicon-front-z"></div>
+                        </div>
+                        <div id="title">HIGHWAY</div>
+                    </div>
+                    <div class="map-info-subtitle" id="subtitle"></div>
+                    <div class="map-info-name" id="user-name">SUBMITTED BY</div>
+                    <div class="map-info-value" id="user-value"></div>
+                    <div class="map-info-name" id="date-name">DATE</div>
+                    <div class="map-info-value" id="date-value"></div>
+                    <div class="map-info-name" id="desc-name">DESCRIPTION</div>
+                    <div class="map-info-value" id="desc-value"></div>
+                    <div class="map-info-name" id="coord-name">COORDINATES</div>
+                    <div class="map-info-value" id="coord-value"></div>
+                    <div class="map-info-name" id="video-name">VIDEO (FULLSCREEN RECOMMENDED)</div>
+                    <div class="map-info-value" id="video-value"></div>
+                    <div class="map-info-name" id="to-name">TO</div>
+                    <div class="map-info-value" id="to-value"></div>
+                    <!--<button class="map-info-create_blockage" id="new-blockage">
+                        <div class="map-info-create_blockage-icon"></div>
+                        Create New Blockage
+                    </button>-->
+                    <div class="map-info-form" id="input-form" style="display: none;">
+                        <div class="map-info-name">TITLE</div>
+                        <input class="map-info-input" type="text" id="input-title">
+                        <div class="map-info-name">DISCORD TAG / IN-GAME USERNAME</div>
+                        <input class="map-info-input" type="text" id="input-user">
+                        <div class="map-info-name">DESCRIPTION</div>
+                        <textarea class="map-info-input desc" id="input-desc"></textarea>
+                        <button class="map-info-submit" id="input-submit">Submit Blockage</button>
+                    </div>
+                </div>
+                <div class="map-legend">
+                    <div class="map-legend-entry">
+                        <div class="map-legend-color" style="background-color: hsl(185deg, 85%, 25%);"></div>
+                        计划中
+                    </div>
+                    <div class="map-legend-entry">
+                        <div class="map-legend-color" style="background-color: hsl(71deg, 85%, 40%);"></div>
+                        直角公路窄挖 (2 宽, 3 高)
+                    </div>
+                    <div class="map-legend-entry">
+                        <div class="map-legend-color" style="background-color: hsl(38deg, 85%, 40%);"></div>
+                        直角公路宽挖 (6 宽, 4 高)
+                    </div>
+                    <div class="map-legend-entry">
+                        <div class="map-legend-color" style="background-color: hsl(9deg, 85%, 40%);"></div>
+                        直角公路铺砌 (6 寬, 4 高)
+                    </div>
+                    <div class="map-legend-entry">
+                        <div class="map-legend-color" style="background-color: hsl(71deg, 85%, 40%);"></div>
+                        对角线公路窄挖 (3 宽, 3 高)
+                    </div>
+                    <div class="map-legend-entry">
+                        <div class="map-legend-color" style="background-color: hsl(38deg, 85%, 40%);"></div>
+                        对角线公路宽挖 (9 宽, 4 高)
+                    </div>
+                    <div class="map-legend-entry">
+                        <div class="map-legend-color" style="background-color: hsl(9deg, 85%, 40%);"></div>
+                        对角线公路铺砌 (9 寬, 4 高)
+                    </div>
+                    <div class="map-legend-coord" id="coords">
+                        XZ: 0, 0
+                    </div>
+                    <div class="map-legend-coord" style="margin-top: 0;" id="ow-coords">
+                        (Overworld XZ: 0, 0)
+                    </div>
+                    <div class="map-legend-coord">有意修建高速公路者请加入QQ群: 499466534</div>
+		    <div class="map-legend-coord">此网站由Highways2b2t.net修改而來</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

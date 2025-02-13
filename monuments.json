@@ -1,0 +1,62 @@
+[
+    {
+        "name": "+X OVW WB 3.75m World Border Monument",
+        "description": "+X 3.75m Monument Built by MCG 24.8.2021",
+        "video": "kMWPYsb8WKg",
+        "coords": [3750000, 0]
+    }  
+    ,
+    {
+        "name": "+X 3m Nether Monument",
+        "description": "+X 3m Monument Built by MCG 11.7.2021",
+        "video": "ZiIgGHySdFE",
+        "coords": [3000000, 0]
+    }  
+
+    ,
+    {
+        "name": "+X 1.875m Nether Monument",
+        "description": "+X 1.875m Monument Built by MCG 16.6.2021",
+        "video": "FADezEuQpLQ",
+        "coords": [1875000, 0]
+    }  
+    ,
+    {
+        "name": "-X -Z 1m Nether Monument",
+        "description": "-X -Z 1m Monument Built by MCG 11.1.2022",
+        "video": "QC7K1S5xJfo",
+        "coords": [-1000000, -1000000]
+    },  
+
+    {
+        "name": "+X NWB 30m The Terminus of Hell",
+        "description": "+X NWB 30m The Terminus of Hell",
+        "video": "dQw4w9WgXcQ",
+        "coords": [30000000, 0]
+    }  
+    ,  
+
+    {
+        "name": "-X -Z NWB 30m",
+        "description": "-X -Z NWB Dug by Hare_Hare_Yukai and Yikyu. Longest road in Minecraft History. More info here https://imgur.com/a/3dsM4XS.",
+        "video": "NRT3iRsDeZw",
+        "coords": [-30000000, -30000000]
+    },      
+
+    {
+        "name": "-X +Z 1m Nether Monument",
+        "description": "-X +Z 1m Monument Built by MCG 25.5.2021",
+        "video": "hipvObyoNBA",
+        "coords": [-1000000, 1000000]
+    },
+    
+    {
+        "name": "First road to NWB",
+        "description": "First road to NWB dug by Hare_Hare_Yukai",
+        "video": "Oqn4dwl-imo",
+        "coords": [30000000, 28500]
+    }  
+    
+
+    
+]
