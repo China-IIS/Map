@@ -20,7 +20,7 @@
     <script src="jquery-3.6.3.min.js"></script>
     <script src="map.js"></script>
     <script src="script.js"></script>
-    <title>Map - ChinaIIS</title>
+    <title>Map - China IIS</title>
 </head>
 <body style="overflow: hidden;">
     <div class="main" style="overflow: hidden;">
@@ -33,11 +33,11 @@
             </div>
             <div class="navbar-buttons">
                 <div class="navbar-button-border">
-                    <a href="map.html" class="navbar-button selected">Map</a>
+                    <a href="map.html" class="navbar-button selected">地图</a>
                 </div>
-                <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button">Discord</a>
+                <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button">加入Discord</a>
 		<!-- <a href="stats.html" class="navbar-button">Statistics</a> -->
-                <a href="projects.html" class="navbar-button">Projects</a>
+                <a href="projects.html" class="navbar-button">项目</a>
             </div>
         </div>
         <div class="page">
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="map-viewport" id="viewport">
-                <canvas class="map-canvas" id="canvas" width="1280" height="720">Your browser doesn't support Canvas 2D :'(</canvas>
+                <canvas class="map-canvas" id="canvas" width="1280" height="720">您的浏览器不支持Canvas 2D :(</canvas>
                 <div class="map-info" id="info" style="display: none;">
                     <img id="info-close" class="map-info-close" src="xmark-solid.svg">
                     <div class="map-info-title">
@@ -59,33 +59,33 @@
                             <div class="hwicon-front-x"></div>
                             <div class="hwicon-front-z"></div>
                         </div>
-                        <div id="title">HIGHWAY</div>
+                        <div id="title">高速公路</div>
                     </div>
                     <div class="map-info-subtitle" id="subtitle"></div>
-                    <div class="map-info-name" id="user-name">SUBMITTED BY</div>
+                    <div class="map-info-name" id="user-name">提交者</div>
                     <div class="map-info-value" id="user-value"></div>
-                    <div class="map-info-name" id="date-name">DATE</div>
+                    <div class="map-info-name" id="date-name">日期</div>
                     <div class="map-info-value" id="date-value"></div>
-                    <div class="map-info-name" id="desc-name">DESCRIPTION</div>
+                    <div class="map-info-name" id="desc-name">描述</div>
                     <div class="map-info-value" id="desc-value"></div>
-                    <div class="map-info-name" id="coord-name">COORDINATES</div>
+                    <div class="map-info-name" id="coord-name">坐标</div>
                     <div class="map-info-value" id="coord-value"></div>
-                    <div class="map-info-name" id="video-name">VIDEO (FULLSCREEN RECOMMENDED)</div>
+                    <div class="map-info-name" id="video-name">视频(建议使用全屏)</div>
                     <div class="map-info-value" id="video-value"></div>
-                    <div class="map-info-name" id="to-name">TO</div>
+                    <div class="map-info-name" id="to-name">至</div>
                     <div class="map-info-value" id="to-value"></div>
                     <!--<button class="map-info-create_blockage" id="new-blockage">
                         <div class="map-info-create_blockage-icon"></div>
                         Create New Blockage
                     </button>-->
                     <div class="map-info-form" id="input-form" style="display: none;">
-                        <div class="map-info-name">TITLE</div>
+                        <div class="map-info-name">标题</div>
                         <input class="map-info-input" type="text" id="input-title">
-                        <div class="map-info-name">DISCORD TAG / IN-GAME USERNAME</div>
+                        <div class="map-info-name">不一致标签/游戏中用户名</div>
                         <input class="map-info-input" type="text" id="input-user">
-                        <div class="map-info-name">DESCRIPTION</div>
+                        <div class="map-info-name">说明</div>
                         <textarea class="map-info-input desc" id="input-desc"></textarea>
-                        <button class="map-info-submit" id="input-submit">Submit Blockage</button>
+                        <button class="map-info-submit" id="input-submit">提交阻塞</button>
                     </div>
                 </div>
                 <div class="map-legend">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="map-legend-entry">
                         <div class="map-legend-color" style="background-color: hsl(9deg, 85%, 40%);"></div>
-                        直角公路铺砌 (6 寬, 4 高)
+                        直角公路铺砌 (6 宽, 4 高)
                     </div>
                     <div class="map-legend-entry">
                         <div class="map-legend-color" style="background-color: hsl(71deg, 85%, 40%);"></div>
@@ -115,15 +115,15 @@
                     </div>
                     <div class="map-legend-entry">
                         <div class="map-legend-color" style="background-color: hsl(9deg, 85%, 40%);"></div>
-                        对角线公路铺砌 (9 寬, 4 高)
+                        对角线公路铺砌 (9 宽, 4 高)
                     </div>
                     <div class="map-legend-coord" id="coords">
-                        XZ: 0, 0
+                        下界 XZ: 0, 0
                     </div>
                     <div class="map-legend-coord" style="margin-top: 0;" id="ow-coords">
-                        (Overworld XZ: 0, 0)
+                        (主世界 XZ: 0, 0)
                     </div>
-                    <div class="map-legend-coord">有意修建高速公路者请加入QQ群: 499466534</div>
+                    <div class="map-legend-coord">想加入我们请点击 <a href="https://qm.qq.com/q/cyYeETfiIU">此处</a> 加入我们的中国腾讯QQ交流群审核后加入</div>
 		    <div class="map-legend-coord">此网站由Highways2b2t.net修改而來</div>
                 </div>
             </div>
