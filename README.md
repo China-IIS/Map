@@ -3,4 +3,4 @@
 <h2>🚀 我们使用了</h2>
 <p><a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="42" height="42" /></a>
 <a target="_blank" href="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" style="display: inline-block;"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="42" height="42" /></a></p>
-<p>没错 China-IIS的网站正是依靠Github Page搭建 其访问网址为https://highways2b2t.xin/<p>
+<p>没错，我们的网站托管于Github Pages上,你可以通过该网址来访问:https://highways2b2t.xin/<p>
