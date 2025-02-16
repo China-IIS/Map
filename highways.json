@@ -126,10 +126,22 @@
         "to": [0, 10000]
     },
     {
+        "name": "50K 直角环线 Leg 2",
+        "state": "main_axis_dug_paved",
+        "from": [50000, -0],
+        "to": [50000, 3007]
+    },
+    {
+        "name": "50K 直角环线 Leg 2",
+        "state": "main_axis_dug_wide",
+        "from": [50000, 3007],
+        "to": [50000, 3007]
+    },
+    {
         "name": "50K 直角环线 Leg 3",
         "state": "main_axis_dug_wide",
         "from": [50000, -50000],
-        "to": [50000, -6400]
+        "to": [50000, -0]
     },
     {
         "name": "50K 直角环线 Leg 4",
