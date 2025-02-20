@@ -63,7 +63,7 @@
         "name": "-XZ 对角线公路",
         "state": "diagonal_dug_wide",
         "from": [-22000, -22000],
-        "to": [-150000, -150000]
+        "to": [-157000, -157000]
     },
     {
         "name": "-X +Z 对角线公路",
@@ -128,37 +128,43 @@
     {
         "name": "50K 直角环线 Leg 1",
         "state": "main_axis_dug_wide",
-        "from": [50000, 50000],
-        "to": [9000, 50000]
+        "from": [0, 50000],
+        "to": [50000, 50000]
     },
     {
         "name": "50K 直角环线 Leg 2",
-        "state": "main_axis_paved",
-        "from": [50000, 0],
+        "state": "main_axis_dug_wide",
+        "from": [50000, 50000],
         "to": [50000, 3007]
     },
     {
         "name": "50K 直角环线 Leg 2",
-        "state": "main_axis_dug_wide",
+        "state": "main_axis_paved",
         "from": [50000, 3007],
-        "to": [50000, 50000]
+        "to": [50000, 0]
     },
     {
         "name": "50K 直角环线 Leg 3",
         "state": "main_axis_dug_wide",
-        "from": [50000, -50000],
-        "to": [50000, -0]
-    },
-    {
-        "name": "50K 直角环线 Leg 4",
-        "state": "main_axis_paved",
-        "from": [0, -50000],
-        "to": [40000, -50000]
+        "from": [50000, -0],
+        "to": [50000, -50000]
     },
     {
         "name": "50K 直角环线 Leg 4",
         "state": "main_axis_dug_wide",
+        "from": [50000, -50000],
+        "to": [40000, -50000]
+    },
+    {
+        "name": "50K 直角环线 Leg 4",
+        "state": "main_axis_paved",
         "from": [40000, -50000],
-        "to": [50000, -50000]
-    }
+        "to": [0, -50000]
+    },
+    {
+        "name": "50K 直角环线 Leg 8",
+        "state": "main_axis_dug_wide",
+        "from": [-0, 50000],
+        "to": [-1000, 50000]
+    },
 ]
