@@ -1,3 +1,4 @@
+
 [
     {
         "name": "+X 直角公路",
@@ -45,24 +46,18 @@
         "name": "+XZ 对角线公路",
         "state": "diagonal_paved",
         "from": [0, 0],
-        "to": [97000, 97000]
+        "to": [109000, 109000]
     },
     {
         "name": "+XZ 对角线公路",
         "state": "diagonal_dug_wide",
-        "from": [97000, 97000],
+        "from": [109000, 109000],
         "to": [963000, 963000]
     },
     {
         "name": "-XZ 对角线公路",
         "state": "diagonal_paved",
         "from": [0, 0],
-        "to": [-186000, -186000]
-    },
-    {
-        "name": "-XZ 对角线公路",
-        "state": "diagonal_dug_wide",
-        "from": [-186000, -186000],
         "to": [-200000, -200000]
     },
     {
