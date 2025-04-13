@@ -606,7 +606,7 @@ class Map {
 
         //this.ctx.fillStyle = "#573333";
         //this.ctx.fillRect(...this.cam.toScreen(-30_00_000, 30_00_000), this.cam.scale(60_00_000), this.cam.scale(60_00_000));
-        this.ctx.fillStyle = "#5A3E2B";
+        this.ctx.fillStyle = "#562A2A";
         this.ctx.fillRect(...this.cam.toScreen(-3_750_000, -3_750_000), this.cam.scale(7_500_000), this.cam.scale(7_500_000));
 
         if (this.spawnImage)
