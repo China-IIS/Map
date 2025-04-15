@@ -64,19 +64,19 @@
         "name": "-X +Z 对角线公路",
         "state": "diagonal_paved",
         "from": [0, 0],
-        "to": [-88000, 88000]
+        "to": [-93000, 93000]
     },
     {
         "name": "-X +Z 对角线公路",
         "state": "diagonal_dug_wide",
-        "from": [-88000, 88000],
+        "from": [-93000, 93000],
         "to": [-200000, 200000]
     },
     {
         "name": "+X -Z 对角线公路",
         "state": "diagonal_paved",
         "from": [0, 0],
-        "to": [22000, -22000]
+        "to": [22500, -22500]
     },
     {
         "name": "10K 直角环线 Leg 1",
