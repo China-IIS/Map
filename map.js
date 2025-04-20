@@ -12,7 +12,7 @@ const STATES = {
         color: [185, 85, 25]
     },
     main_axis_dug_narrow: {
-        name: "直角公路窄挖 (2 宽, 2 高)",
+        name: "直角公路窄挖 (2 宽, 4 高)",
         color: [71, 85, 40]
     },
     main_axis_dug_wide: {
@@ -24,7 +24,7 @@ const STATES = {
         color: [9, 85, 40]
     },
     diagonal_dug_narrow: {
-        name: "对角线公路窄挖 (3 宽, 2 高)",
+        name: "对角线公路窄挖 (3 宽, 4 高)",
         color: [71, 85, 40]
     },
     diagonal_dug_wide: {
