@@ -12,11 +12,11 @@ const STATES = {
         color: [185, 85, 25]
     },
     main_axis_dug_narrow: {
-        name: "直角公路窄挖 (2 宽, 4 高)",
+        name: "直角公路窄隧道 (2 宽, 4 高)",
         color: [71, 85, 40]
     },
     main_axis_dug_wide: {
-        name: "直角公路宽挖 (6 宽, 4 高)",
+        name: "直角公路全尺寸隧道 (6 宽, 4 高)",
         color: [38, 85, 40]
     },
     main_axis_paved: {
@@ -24,11 +24,11 @@ const STATES = {
         color: [9, 85, 40]
     },
     diagonal_dug_narrow: {
-        name: "对角线公路窄挖 (3 宽, 4 高)",
+        name: "对角线公路窄隧道 (3 宽, 4 高)",
         color: [71, 85, 40]
     },
     diagonal_dug_wide: {
-        name: "对角线公路宽挖 (9 宽, 4 高)",
+        name: "对角线公路全尺寸隧道 (9 宽, 4 高)",
         color: [38, 85, 40]
     },
     diagonal_paved: {
