@@ -33,7 +33,7 @@
         "state": "planned",
         "from": [-200000, 0],
         "to": [-30000000, 0]
-    },
+    }
     {
         "name": "-Z 直角公路",
         "state": "main_axis_paved",
