@@ -1150,5 +1150,149 @@
         "state": "planned",
         "from": [-3750000, 3750000],
         "to": [-0, 3750000]
+    },
+    {
+        "name": "25K 钻石环线 Leg 1",
+        "state": "planned",
+        "from": [-0, 25000],
+        "to": [25000, -0]
+    },
+    {
+        "name": "25K 钻石环线 Leg 2",
+        "state": "planned",
+        "from": [25000, 0],
+        "to": [-0, -25000]
+    },
+    {
+        "name": "25K 钻石环线 Leg 3",
+        "state": "planned",
+        "from": [0, -25000],
+        "to": [-25000, 0]
+    },
+    {
+        "name": "25K 钻石环线 Leg 4",
+        "state": "planned",
+        "from": [-25000, -0],
+        "to": [0, 25000]
+    },
+    {
+        "name": "50K 钻石环线 Leg 1",
+        "state": "planned",
+        "from": [-0, 50000],
+        "to": [50000, -0]
+    },
+    {
+        "name": "50K 钻石环线 Leg 2",
+        "state": "planned",
+        "from": [50000, 0],
+        "to": [-0, -50000]
+    },
+    {
+        "name": "50K 钻石环线 Leg 3",
+        "state": "planned",
+        "from": [0, -50000],
+        "to": [-50000, 0]
+    },
+    {
+        "name": "50K 钻石环线 Leg 4",
+        "state": "planned",
+        "from": [-50000, -0],
+        "to": [0, 50000]
+    },
+    {
+        "name": "125K 钻石环线 Leg 1",
+        "state": "planned",
+        "from": [-0, 125000],
+        "to": [125000, -0]
+    },
+    {
+        "name": "125K 钻石环线 Leg 2",
+        "state": "planned",
+        "from": [125000, 0],
+        "to": [-0, -125000]
+    },
+    {
+        "name": "125K 钻石环线 Leg 3",
+        "state": "planned",
+        "from": [0, -125000],
+        "to": [-125000, 0]
+    },
+    {
+        "name": "125K 钻石环线 Leg 4",
+        "state": "planned",
+        "from": [-125000, -0],
+        "to": [0, 125000]
+    },
+    {
+        "name": "250K 钻石环线 Leg 1",
+        "state": "planned",
+        "from": [-0, 250000],
+        "to": [250000, -0]
+    },
+    {
+        "name": "250K 钻石环线 Leg 2",
+        "state": "planned",
+        "from": [250000, 0],
+        "to": [-0, -250000]
+    },
+    {
+        "name": "250K 钻石环线 Leg 3",
+        "state": "planned",
+        "from": [0, -250000],
+        "to": [-250000, 0]
+    },
+    {
+        "name": "250K 钻石环线 Leg 4",
+        "state": "planned",
+        "from": [-250000, -0],
+        "to": [0, 250000]
+    },
+    {
+        "name": "500K 钻石环线 Leg 1",
+        "state": "planned",
+        "from": [-0, 500000],
+        "to": [500000, -0]
+    },
+    {
+        "name": "500K 钻石环线 Leg 2",
+        "state": "planned",
+        "from": [500000, 0],
+        "to": [-0, -500000]
+    },
+    {
+        "name": "500K 钻石环线 Leg 3",
+        "state": "planned",
+        "from": [0, -500000],
+        "to": [-500000, 0]
+    },
+    {
+        "name": "500K 钻石环线 Leg 4",
+        "state": "planned",
+        "from": [-500000, -0],
+        "to": [0, 500000]
+    },
+    {
+        "name": "3.75M 主世界边界 钻石环线 Leg 1",
+        "state": "planned",
+        "from": [-0, 3750000],
+        "to": [3750000, -0]
+    },
+    {
+        "name": "3.75M 主世界边界 钻石环线 Leg 2",
+        "state": "planned",
+        "from": [3750000, 0],
+        "to": [-0, -3750000]
+    },
+    {
+        "name": "3.75M 主世界边界 钻石环线 Leg 3",
+        "state": "planned",
+        "from": [0, -3750000],
+        "to": [-3750000, 0]
+    },
+    {
+        "name": "3.75M 主世界边界 钻石环线 Leg 4",
+        "state": "planned",
+        "from": [-3750000, -0],
+        "to": [0, 3750000]
     }
 ]
