@@ -127,7 +127,7 @@
     },
     {
         "name": "+X -Z 对角线公路",
-        "state": "diagonal_dug_wide",
+        "state": "planned",
         "from": [50000, -50000],
         "to": [30000000, -30000000]
     },
