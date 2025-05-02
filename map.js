@@ -24,7 +24,7 @@ const STATES = {
         color: [9, 85, 40]
     },
     diagonal_dug_narrow: {
-        name: "对角线公路窄隧道 (3 宽, 4 高)",
+        name: "对角线公路窄隧道 (3 或 5 宽, 4 高)",
         color: [71, 85, 40]
     },
     diagonal_dug_wide: {
