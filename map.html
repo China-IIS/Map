@@ -20,6 +20,7 @@
     <script src="jquery-3.6.3.min.js"></script>
     <script src="map.js"></script>
     <script src="script.js"></script>
+    <script src="lang.js"></script>
     <title>Map - China IIS</title>
 </head>
 <body style="overflow: hidden;">
@@ -36,8 +37,14 @@
                     <a href="map.html" class="navbar-button selected">高速公路地图</a>
                 </div>
                 <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button">加入Discord</a>
-		<a href="stats.html" class="navbar-button">統計資料</a>
+		        <a href="stats.html" class="navbar-button">統計資料</a>
                 <a href="projects.html" class="navbar-button">我们的项目</a>
+                <select onchange="location = this.value;" class="navbar-button">语言/Language
+                    <option>语言/Language</option>
+                    <option value="?lang=en">English</option>
+                    <option value="?lang=zh-TW">繁體中文</option>
+                    <option value="?lang=zh-CN" class="navbar-button">简体中文</option>
+                </select>
             </div>
         </div>
         <div class="page">
