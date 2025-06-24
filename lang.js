@@ -18,7 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 設定選單顯示目前語言
   if (selector) {
-    selector.value = currentLang;
+    if (currentLang && selector.querySelector(`option[value="${currentLang}"]`)) {
+      selector.value = currentLang;
+    } else {
+      selector.value = "";
+    }
 
     // 當用戶切換語言時
     selector.addEventListener('change', function () {
