@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!currentLang) {
     // 沒有語言參數，就從 localStorage 嘗試取得
-    const savedLang = localStorage.getItem('preferredLang') || 'zh-Hant';
+    const savedLang = localStorage.getItem('preferredLang') || 'zh-CN';
 
     // 如果 URL 中沒有 lang，就跳轉加上它
     const url = new URL(window.location.href);
