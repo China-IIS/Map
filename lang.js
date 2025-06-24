@@ -1,7 +1,25 @@
 <script>
+  const selector = document.getElementById('langSelector');
+  
 function getLang() {
   const params = new URLSearchParams(window.location.search);
-  return params.get('lang') || 'zh-CN'; // 預設語言
+  const lang = params.get('lang');
+
+  if (lang) {
+    localStorage.setItem('preferredLang', lang);
+    if (selector) selector.value = lang;
+    return lang;
+  }
+
+  const savedLang = localStorage.getItem('preferredLang') || 'zh-CN';
+    
+  if (!params.get('lang')) {
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set('lang', savedLang);
+    window.location.href = newUrl.href;
+  }
+
+  return savedLang;
 }
 
 async function loadTranslations(lang) {
@@ -20,6 +38,15 @@ function applyTranslations(data) {
     if (data[key]) el.textContent = data[key];
   });
 }
+
+if (selector) {
+  selector.addEventListener('change', function () {
+    const selectedLang = this.value;
+    localStorage.setItem('preferredLang', selectedLang);
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set('lang', selectedLang);
+    window.location.href = newUrl.href;
+  })
 
 loadTranslations(getLang());
 </script>
