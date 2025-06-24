@@ -35,11 +35,11 @@
                 <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button">加入Discord</a>
 		        <a href="stats.html" class="navbar-button">统计资料</a>
                 <a href="projects.html" class="navbar-button">我们的项目</a>
-                <ul class="navbar-button">语言/Language
-                    <li><a href="?lang=en" class="navbar-button">English</a></li>
-                    <li><a href="?lang=zh-TW" class="navbar-button">繁體中文</a></li>
-                    <li><a href="?lang=zh-CN" class="navbar-button">简体中文</a></li>
-                </ul>
+                <select onchange="location = this.value;" class="navbar-button">语言/Language
+                    <option value="?lang=en">English</option>
+                    <option value="?lang=zh-TW">繁體中文</option>
+                    <option value="?lang=zh-CN" class="navbar-button">简体中文</option>
+                </select>
             </div>
         </div>
         <div class="page">
