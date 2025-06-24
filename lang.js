@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentLang && selector.querySelector(`option[value="${currentLang}"]`)) {
       selector.value = currentLang;
     } else {
-      selector.value = "";
+      selector.value = "zh-CN"; // 預設語言
     }
 
     // 當用戶切換語言時
