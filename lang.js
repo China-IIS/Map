@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 載入翻譯檔案
-  fetch(`/lang/${currentLang}.json`)
+  fetch(`lang/${currentLang}.json`)
     .then(res => res.json())
     .then(data => {
       document.querySelectorAll('[data-i18n]').forEach(el => {
