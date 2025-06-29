@@ -17,7 +17,6 @@
     <meta name="googlebot" content="notranslate">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font/style.css">
-    <script src="script.js"></script>
     <title>Independent Interstate Society</title>
 </head>
 <body>
@@ -32,7 +31,7 @@
             <div class="navbar-buttons">
                 <a href="map.html" class="navbar-button" data-i18n="Map">高速公路地图</a>
                 <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button" data-i18n="Discord">加入Discord</a>
-		        <a href="stats.html" class="navbar-button" data-i18n="Statistics">统计资料</a>
+                <a href="stats.html" class="navbar-button" data-i18n="Statistics">统计资料</a>
                 <a href="projects.html" class="navbar-button" data-i18n="Project">我们的项目</a>
                 <select id="langSelector" class="navbar-button">
                     <option value="en">English</option>
@@ -76,12 +75,6 @@
                     <p>
                         清理、修复高速公路, 扩建下界天花板.
                     </p>
-                    <!-- <h1>我們的工具</h1>
-                    <p>
-                        我們使用 <a href="https://github.com/lambda-client/lambda">L̶a̶m̶b̶d̶a̶</a> as our client and we have a custom made
-                        Lambda plugin <a href="https://github.com/lambda-plugins/HighwayTools">H̶i̶g̶h̶w̶a̶y̶T̶o̶o̶l̶s̶</a> designed to make the
-                        process of creating highways easier. (Thanks to Constructor#9948 for creating this tool) (We dont use these currently because they are outdated. New tools are being developed as i write this text.)
-		            </p> -->
                     <h1>高速公路位于哪里?</h1>
                     <p>
                         您可以在我们的 <a href="/map.html">Map</a>上找到下界高速公路位置. 它们始终位于 Y 高度 119 或 120,具体取决于它是否被铺砌.
@@ -100,12 +93,11 @@
                     <div class="footer-list-title">更多页面</div>
                     <a class="footer-list-option" href="index.html">主页</a>
                     <a class="footer-list-option" href="map.html">地图</a>
-		            <a class="footer-list-option" href="stats.html">统计</a>
+                    <a class="footer-list-option" href="stats.html">统计</a>
                     <a class="footer-list-option" href="projects.html">项目</a>
                 </div>
                 <div class="footer-list">
                     <div class="footer-list-title">找到我们</div>
-		            <!-- <a class="footer-list-option" href="https://2b2t.miraheze.org/wiki/Highway_Workers_Union">Wiki</a> -->
                     <a class="footer-list-option" href="https://discord.gg/NQGqFXCjda">Discord</a>
                     <a class="footer-list-option" href="https://qm.qq.com/q/cyYeETfiIU">QQ Group</a>
                     <a class="footer-list-option" href="https://t.me/+RKI5vdRkPrY1MTg9">Telegram</a>
@@ -116,9 +108,13 @@
         <div class="footer-bottom">
             <div class="footer-bottom-left">IIS高速公路组织与Mojang,微软,2B2T.XIN服务器亦无从属关系</div>
             <div class="footer-bottom-right">我们活跃于中国2B2T.XIN服务器</div>
-	    <div class="footer-bottom-right">此网站由Highways2b2t.net修改而来</div>
+        <div class="footer-bottom-right">此网站由Highways2b2t.net修改而来</div>
         </div>
     </div>
+    <script src="script.js"></script>
     <script src="lang.js"></script>
+    <!--Update 6/29/2025 By Sakurazuki
+    -->
+    <!--改了js脚本加入位置 原先那样会阻塞早期渲染 放慢加载速度-->
 </body>
 </html>
