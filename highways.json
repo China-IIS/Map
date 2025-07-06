@@ -9,12 +9,12 @@
         "name": "+X 直角公路",
         "state": "main_axis_dug_wide",
         "from": [215000, 0],
-        "to": [540000, 0]
+        "to": [570000, 0]
     },
     {
         "name": "+X 直角公路",
         "state": "main_axis_dug_narrow",
-        "from": [540000, 0],
+        "from": [570000, 0],
         "to": [3750000, 0]
     },
     {
@@ -33,12 +33,12 @@
         "name": "-X 直角公路",
         "state": "main_axis_dug_wide",
         "from": [-200000, 0],
-        "to": [-411000, 0]
+        "to": [-433000, 0]
     },
     {
         "name": "-X 直角公路",
         "state": "planned",
-        "from": [-411000, 0],
+        "from": [-433000, 0],
         "to": [-30000000, 0]
     },
     {
