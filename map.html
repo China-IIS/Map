@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地图 - China IIS</title>
+    
     <meta name="description" content="The 2b2t group that builds and maintains the nether highways.">
     <meta name="keywords" content="2b2t, minecraft, group, highway, nether, hwu, meg, mcg, iis">
     <meta property="og:image" content="logo.png">
@@ -15,50 +16,56 @@
     <meta name="theme-color" content="#BF1E2E">
     <meta name="google" content="nositelinkssearchbox">
     <meta name="googlebot" content="notranslate">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="font/style.css"> 
+    
     <script src="jquery-3.6.3.min.js"></script>
     <script src="map.js"></script>
-    <script src="script.js"></script>
-    <title>Map - China IIS</title>
 </head>
-<body style="overflow: hidden;">
-    <div class="main" style="overflow: hidden;">
-        <div class="navbar" id="navbar">
-            <a class="navbar-logo-link" href="index.html">
-                <img class="navbar-logo" src="navbar_logo.png">
+<body style="overflow-x: hidden;"> <div class="main-container">
+        <header class="navbar" id="navbar">
+            <a href="index.html" class="navbar-logo-link">
+                <img src="navbar_logo.png" alt="网站Logo" class="navbar-logo">
             </a>
-            <div style="border-color: transparent;" class="navbar-button-border icon" id="bars-border">
-                <img src="bars.svg" class="navbar-button icon" id="navbar-bars">
-            </div>
-            <div class="navbar-buttons">
-                <div class="navbar-button-border">
-                    <a href="map.html" class="navbar-button selected" data-i18n="Map">高速公路地图</a>
+            
+            <nav class="navbar-links">
+                <a href="index.html" class="navbar-button">主页</a>
+                <a href="map.html" class="navbar-button selected">高速公路地图</a>
+                <a href="stats.html" class="navbar-button">统计资料</a>
+                <a href="projects.html" class="navbar-button">我们的项目</a>
+                <a href="#" class="navbar-button">找到我们</a> <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button">Discord</a>
+                <a href="https://jq.qq.com/?_wv=1027&k=your-qq-group-key" target="_blank" class="navbar-button">QQ Group</a>
+                <a href="https://t.me/your-telegram-link" target="_blank" class="navbar-button">Telegram</a>
+                <a href="https://github.com/your-github-repo" target="_blank" class="navbar-button">Github</a>
+
+                <div class="navbar-language-selector">
+                    <select id="langSelector">
+                        <option value="en">English</option>
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="zh-CN">简体中文</option>
+                    </select>
                 </div>
-                <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button" data-i18n="Discord">加入Discord</a>
-		        <a href="stats.html" class="navbar-button" data-i18n="Statistics">統計資料</a>
-                <a href="projects.html" class="navbar-button" data-i18n="Project">我们的项目</a>
-                <select id="langSelector" class="navbar-button">
-                    <option value="en">English</option>
-                    <option value="zh-TW">繁體中文</option>
-                    <option value="zh-CN">简体中文</option>
-                </select>
-            </div>
-        </div>
-        <div class="page">
-            <img class="background-image" src="background_fx.jpg" alt="" srcset="">
+            </nav>
+
+            <button class="navbar-toggle-button" id="navbar-toggle" aria-label="切换导航">
+                <img src="bars.svg" alt="菜单图标">
+            </button>
+        </header>
+
+        <main class="page-content-wrapper">
             <div class="page-heading padded">
-                <div class="page-heading-text">
-                    MAP
-                </div>
+                <h1 class="page-heading-text">MAP</h1>
             </div>
+            
             <div class="map-viewport" id="viewport">
                 <canvas class="map-canvas" id="canvas" width="1280" height="720">您的浏览器不支持Canvas 2D</canvas>
                 <div class="map-info" id="info" style="display: none;">
-                    <img id="info-close" class="map-info-close" src="xmark-solid.svg">
+                    <img id="info-close" class="map-info-close" src="xmark-solid.svg" alt="关闭">
                     <div class="map-info-title">
                         <div class="map-info-marker" id="marker-icon"></div>
-                        <div class="map-info-highway" id="hwicon" style="--color: hsl(9deg, 85%, 40%)" style="display: none;" id="highway-icon">
+                        <div class="map-info-highway" id="hwicon" style="--color: hsl(9deg, 85%, 40%); display: none;">
                             <div class="hwicon-back-x"></div>
                             <div class="hwicon-back-z"></div>
                             <div class="hwicon-front-x"></div>
@@ -79,10 +86,6 @@
                     <div class="map-info-value" id="video-value"></div>
                     <div class="map-info-name" id="to-name">TO</div>
                     <div class="map-info-value" id="to-value"></div>
-                    <!--<button class="map-info-create_blockage" id="new-blockage">
-                        <div class="map-info-create_blockage-icon"></div>
-                        Create New Blockage
-                    </button>-->
                     <div class="map-info-form" id="input-form" style="display: none;">
                         <div class="map-info-name">标题</div>
                         <input class="map-info-input" type="text" id="input-title">
@@ -117,11 +120,25 @@
                         (主世界 XZ: 0, 0)
                     </div>
                     <div class="map-legend-coord">如果您想加入我们,请点击 <a href="https://qm.qq.com/q/cyYeETfiIU">此处</a> 加入我们的中国腾讯QQ交流群审核后加入</div>
-		    <div class="map-legend-coord">此网站由Highways2b2t.net修改而來</div>
+                    <div class="map-legend-coord">此网站由Highways2b2t.net修改而來</div>
                 </div>
             </div>
-        </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-logos">
+                    <!--懒得说-->
+                </div>
+                <div class="footer-links">
+                    <!--这是狗屎-->
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-disclaimer">&copy; 2025 Independent Interstate Society</p>
+            </div>
+        </footer>
     </div>
+    <script src="script.js"></script>
     <script src="lang.js"></script>
 </body>
 </html>
