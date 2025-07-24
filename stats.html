@@ -1,167 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="The 2b2t group that builds and maintains the nether highways.">
-    <meta name="keywords" content="2b2t, minecraft, group, highway, nether, hwu, meg, mcg, iis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2b2t.XIN服务器上Independent Interstate Society修建的统计">
+    <meta name="keywords" content="2b2t, minecraft, group, highway, nether, hwu, meg, mcg, iis, 2b2t.xin, statistics, stats">
     <meta property="og:image" content="logo.png">
-    <meta property="og:title" content="The Independent Interstate Society - Statistics" />
-    <meta property="og:description" content="The 2b2t group that builds and maintains the nether highways." />
+    <meta property="og:title" content="Independent Interstate Society - Statistics" />
+    <meta property="og:description" content="2b2t.XIN服务器上Independent Interstate Society修建的统计" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://highways2b2t.xin/" />
+    <meta property="og:url" content="https://highways2b2t.xin/stats.html" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta name="theme-color" content="#BF1E2E">
     <meta name="google" content="nositelinkssearchbox">
     <meta name="googlebot" content="notranslate">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font/style.css">
-    <script src="script.js"></script>
-    <title>统计资料 - China IIS</title>
+
+    <title>统计资料 - Independent Interstate Society</title>
 </head>
 <body>
-    <div class="main">
-        <div class="navbar" id="navbar">
-            <a class="navbar-logo-link" href="index.html">
-                <img class="navbar-logo" src="navbar_logo.png">
+    <div class="main-container">
+        <header class="navbar" id="navbar">
+            <a class="navbar-logo-link" href="index.html" aria-label="主页">
+                <img class="navbar-logo" src="navbar_logo.png" alt="Independent Interstate Society Logo">
             </a>
-            <div style="border-color: transparent;" class="navbar-button-border icon" id="bars-border">
-                <img src="bars.svg" class="navbar-button icon" id="navbar-bars">
-            </div>
-            <div class="navbar-buttons">
+            <button class="navbar-toggle-button" id="navbar-toggle" aria-label="切换导航菜单">
+                <img src="bars.svg" alt="菜单图标">
+            </button>
+            <nav class="navbar-links" id="navbar-links">
                 <a href="map.html" class="navbar-button" data-i18n="Map">高速公路地图</a>
-                <a href="https://discord.gg/3U9k8FNdVR" target="_blank" class="navbar-button" data-i18n="Discord">加入Discord</a>
-                <div class="navbar-button-border">
-                    <a href="stats.html" class="navbar-button selected" data-i18n="Statistics">统计资料</a>
-                </div>
+                <a href="https://discord.gg/3U9k8FNdVR" target="_blank" rel="noopener noreferrer" class="navbar-button" data-i18n="Discord">加入Discord</a>
+                <a href="stats.html" class="navbar-button selected" data-i18n="Statistics" aria-current="page">统计资料</a>
                 <a href="projects.html" class="navbar-button" data-i18n="Project">我们的项目</a>
-                <select id="langSelector" class="navbar-button">
-                    <option value="en">English</option>
-                    <option value="zh-TW">繁體中文</option>
-                    <option value="zh-CN">简体中文</option>
-                </select>
-            </div>
-        </div>
-        <div class="page">
-            <img class="background-image offset" src="background_fx.jpg" alt="" srcset="">
-            <div class="page-heading padded">
-                <div class="page-heading-text">
-                    统计资料
+                <div class="navbar-language-selector">
+                    <label for="langSelector" class="sr-only">选择语言</label>
+                    <select id="langSelector" class="navbar-button">
+                        <option value="en">English</option>
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="zh-CN">简体中文</option>
+                    </select>
                 </div>
-            </div>
-            <div class="page-content">
-                <div class="page-center">
-                    <h1>构建统计资料</h1>
+            </nav>
+        </header>
+
+        <main class="page-content-wrapper">
+            <section class="hero-section hero-section--small">
+                <img class="background-image offset" src="background_fx.jpg" alt="统计页面背景图片" loading="lazy">
+                <div class="hero-overlay">
+                    <h1 class="hero-title">统计资料</h1>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <div class="section-content">
+                    <h2 class="section-heading-text">构建统计资料</h2>
                     <p>
                         以下是一些构建统计资料:
                     </p>
-                    <div class="stats-list">
-                        <div class="stats-list-entry">
-                            <div class="stats-list-value">
+                    <div class="stats-grid">
+                        <div class="stats-card">
+                            <div class="stats-card-value">
                                 357,000 +
                             </div>
-                            <div class="stats-list-name">
+                            <div class="stats-card-name">
                                 黑曜石挖掘
                             </div>
                         </div>
-                        <div class="stats-list-entry">
-                            <div class="stats-list-value">
+                        <div class="stats-card">
+                            <div class="stats-card-value">
                                 13,644,000 +
                             </div>
-                            <div class="stats-list-name">
+                            <div class="stats-card-name">
                                 黑曜石放置
                             </div>
                         </div>
-                        <div class="stats-list-entry">
-                            <div class="stats-list-value">
+                        <div class="stats-card">
+                            <div class="stats-card-value">
                                 55,963,000 +
                             </div>
-                            <div class="stats-list-name">
+                            <div class="stats-card-name">
                                 下界岩挖掘
                             </div>
                         </div>
-                        <div class="stats-list-entry">
-                            <div class="stats-list-value">
+                        <div class="stats-card">
+                            <div class="stats-card-value">
                                 1,654,000 +
                             </div>
-                            <div class="stats-list-name">
+                            <div class="stats-card-name">
                                 末影箱开采
                             </div>
                         </div>
-                    </div>
-                    <div class="stats-list">
-                        <div class="stats-list-entry">
-                            <div class="stats-list-value">
+                        <div class="stats-card">
+                            <div class="stats-card-value">
                                 2,229,000 +
                             </div>
-                            <div class="stats-list-name">
+                            <div class="stats-card-name">
                                 玄武岩挖掘
                             </div>
                         </div>
-                        <div class="stats-list-entry">
-                            <div class="stats-list-value">
+                        <div class="stats-card">
+                            <div class="stats-card-value">
                                 452,000 +
                             </div>
-                            <div class="stats-list-name">
+                            <div class="stats-card-name">
                                 黑石挖掘
                             </div>
                         </div>
                     </div>
-                    <h1>成员</h1>
+
+                    <h2 class="section-heading-text">成员</h2>
                     <p>
                         有关我们的成员信息:
                     </p>
-                    <div class="stats-list">
-                        <div class="stats-list-entry">
-                            <div class="stats-list-value">
+                    <div class="stats-grid">
+                        <div class="stats-card">
+                            <div class="stats-card-value">
                                 33
                             </div>
-                            <div class="stats-list-name">
+                            <div class="stats-card-name">
                                 内群成员
                             </div>
                         </div>
-                        <div class="stats-list-entry">
-                            <div class="stats-list-value">
+                        <div class="stats-card">
+                            <div class="stats-card-value">
                                 126
                             </div>
-                            <div class="stats-list-name">
+                            <div class="stats-card-name">
                                 QQ外群
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-logos">
-                <a href="index.html"><img src="logo_gray.png" alt="" srcset=""></a>
-                <a href="https://discord.gg/bAD6Znhh"><img src="logo_meg.png" alt="" srcset=""></a>
-                <a href="https://discord.gg/gjMaFssx"><img src="logo_mcg.png" alt="" srcset=""></a>
-            </div>
-            <div class="footer-lists">
-                <div class="footer-list">
-                    <div class="footer-list-title">更多页面</div>
-                    <a class="footer-list-option" href="index.html">主页</a>
-                    <a class="footer-list-option" href="map.html">地图</a>
-                    <a class="footer-list-option" href="stats.html">统计</a>
-                    <a class="footer-list-option" href="projects.html">项目</a>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-logos">
+                    <a href="index.html" aria-label="IIS主页"><img src="logo_gray.png" alt="IIS标志"></a>
+                    <a href="https://discord.gg/bAD6Znhh" target="_blank" rel="noopener noreferrer" aria-label="MEG Discord"><img src="logo_meg.png" alt="MEG标志"></a>
+                    <a href="https://discord.gg/gjMaFssx" target="_blank" rel="noopener noreferrer" aria-label="MCG Discord"><img src="logo_mcg.png" alt="MCG标志"></a>
                 </div>
-                <div class="footer-list">
-                    <div class="footer-list-title">找到我们</div>
-                    <a class="footer-list-option" href="https://discord.gg/NQGqFXCjda">Discord</a>
-                    <a class="footer-list-option" href="https://qm.qq.com/q/cyYeETfiIU">QQ Group</a>
-                    <a class="footer-list-option" href="https://t.me/+RKI5vdRkPrY1MTg9">Telegram</a>
-                    <a class="footer-list-option" href="https://github.com/China-IIS">Github</a>
+                <div class="footer-links">
+                    <div class="footer-list">
+                        <h4 class="footer-list-title">更多页面</h4>
+                        <ul>
+                            <li><a class="footer-list-option" href="index.html">主页</a></li>
+                            <li><a class="footer-list-option" href="map.html">地图</a></li>
+                            <li><a class="footer-list-option" href="stats.html" aria-current="page">统计</a></li>
+                            <li><a class="footer-list-option" href="projects.html">项目</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-list">
+                        <h4 class="footer-list-title">找到我们</h4>
+                        <ul>
+                            <li><a class="footer-list-option" href="https://discord.gg/NQGqFXCjda" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                            <li><a class="footer-list-option" href="https://qm.qq.com/q/cyYeETfiIU" target="_blank" rel="noopener noreferrer">QQ群</a></li>
+                            <li><a class="footer-list-option" href="https://t.me/+RKI5vdRkPrY1MTg9" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+                            <li><a class="footer-list-option" href="https://github.com/China-IIS" target="_blank" rel="noopener noreferrer">Github</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-left">IIS高速公路组织与Mojang,微软,2B2T.XIN服务器亦无从属关系</div>
-            <div class="footer-bottom-right">我们活跃于中国2B2T.XIN服务器</div>
-            <div class="footer-bottom-right">此网站由Highways2b2t.net修改而来</div>
-        </div>
+            <div class="footer-bottom">
+                <p class="footer-disclaimer">IIS高速公路组织与Mojang,微软,2B2T.XIN服务器亦无从属关系</p>
+                <p class="footer-location">我们活跃于中国2B2T.XIN服务器</p>
+                <p class="footer-credit">此网站由Highways2b2t.net修改而来</p>
+            </div>
+        </footer>
     </div>
-    <script src="lang.js"></script>
+
+    <script src="script.js" defer></script>
+    <script src="lang.js" defer></script>
 </body>
 </html>
