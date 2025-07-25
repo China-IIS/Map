@@ -10,16 +10,22 @@
     --footer-height: 40px;
 }
 
-body {
+/* --- 全局样式 --- */
+html, body {
     margin: 0;
     padding: 0;
     font-family: 'Manrope', sans-serif;
     background-color: var(--color-background-primary);
     color: var(--color-text-primary);
+    min-height: 100vh; /* 确保HTML和Body至少有100vh高 */
+}
+
+body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden;
+    /* 允许页面滚动，只隐藏横向溢出。这通常是更稳健的方案。 */
+    overflow-x: hidden;
+    overflow-y: auto; 
 }
 
 a {
@@ -31,6 +37,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* --- 导航栏样式 --- */
 .navbar {
     width: 100%;
     height: var(--navbar-height);
@@ -38,9 +45,12 @@ a:hover {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 确保内边距不增加总宽度 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 20;
+    z-index: 20; /* 确保在其他内容之上 */
+    flex-shrink: 0; /* 防止导航栏被主内容挤压变小 */
+    position: sticky; /* 尝试粘性定位，使其在滚动时固定在顶部 */
+    top: 0;
 }
 
 .navbar-logo {
@@ -52,7 +62,7 @@ a:hover {
     font-size: 1.8em;
     font-weight: 700;
     color: var(--color-text-primary);
-    margin-right: auto;
+    margin-right: auto; /* 将链接推到右侧 */
 }
 
 .navbar-links a {
@@ -67,14 +77,193 @@ a:hover {
     color: var(--color-primary);
 }
 
-.main-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
+/* 导航栏响应式菜单按钮 */
+.navbar-toggle {
+    display: none; /* 默认隐藏 */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    margin-left: auto; /* 推到最右边 */
+    padding: 5px;
 }
 
+/* --- index.html 主页内容样式 --- */
+
+/* 主内容容器：确保内容居中且有最大宽度 */
+.main-container {
+    flex-grow: 1; /* 让它填充可用空间 */
+    width: 100%; /* 默认占满父容器宽度 */
+    max-width: 1400px; /* 设置一个最大宽度，例如 1400px */
+    margin: 0 auto; /* 在设置了max-width后，使其在页面中水平居中 */
+    box-sizing: border-box; /* 确保padding和border包含在宽度内 */
+    padding: 0 20px; /* 左右内边距，避免内容紧贴边缘 */
+    display: flex; /* 启用Flexbox布局 */
+    flex-direction: column; /* 子元素垂直堆叠 */
+    /* overflow: hidden; /* 这里通常不需要，让子元素自身处理溢出 */ */
+}
+
+/* 英雄区：包含背景图片和叠加文本 */
+.hero-section {
+    position: relative; /* 允许内部元素绝对定位 */
+    width: 100%; /* 占满 main-container 的宽度 */
+    /* 根据你需求调整高度，例如占据视口剩余高度的固定比例 */
+    height: calc(100vh - var(--navbar-height) - var(--footer-height)); 
+    overflow: hidden; /* 裁剪超出部分 */
+    display: flex; /* 启用Flexbox */
+    justify-content: center; /* 水平居中内容 */
+    align-items: center; /* 垂直居中内容 */
+    text-align: center; /* 文本居中 */
+    color: white; /* 确保文本颜色可见 */
+    flex-shrink: 0; /* 防止英雄区被挤压变小 */
+}
+
+/* 背景图片 */
+.background-image {
+    position: absolute; /* 相对于 .hero-section 定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 关键：图片填充容器并裁剪，保持长宽比 */
+    object-position: center center; /* 图片居中显示 */
+    z-index: 1; /* 确保背景在内容之下 */
+    pointer-events: none; /* 让鼠标事件穿透图片到其下的元素（如果需要）*/
+}
+
+/* 英雄区叠加层（包含标题、副标题、语言选择器） */
+.hero-overlay {
+    position: relative; /* 确保在背景图片之上 */
+    z-index: 2; /* 确保叠加层在背景图之上 */
+    padding: 30px; /* 内部边距 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景，提高文本可读性 */
+    border-radius: var(--border-radius); /* 圆角 */
+    max-width: 800px; /* 限制叠加层宽度 */
+    margin: 20px; /* 外边距，防止贴边 */
+    box-sizing: border-box;
+}
+
+.hero-title {
+    font-size: 3.5em; /* 调整标题大小 */
+    margin-bottom: 10px;
+    color: var(--color-text-primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 文本阴影增强可读性 */
+}
+
+.hero-subtitle {
+    font-size: 1.5em; /* 调整副标题大小 */
+    margin-bottom: 20px;
+    color: var(--color-text-secondary);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 文本阴影增强可读性 */
+}
+
+.lang-selector-container {
+    margin-top: 20px;
+}
+
+#langSelector {
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-primary);
+    font-size: 1em;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23dddddd%22%20d%3D%22M6%209l-4-4h8l-4%204z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+#langSelector:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+}
+
+/* 关于我们部分 */
+.about-section {
+    padding: 40px 20px;
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    flex-shrink: 0; /* 防止被挤压变小 */
+}
+
+.about-section h2 {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-article {
+    background-color: var(--color-background-secondary);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.about-article h3 {
+    color: var(--color-primary);
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.about-article ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-article ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-article ul li::before {
+    content: '•';
+    color: var(--color-primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    flex-shrink: 0;
+}
+
+/* --- 页脚样式 --- */
+.footer {
+    width: 100%;
+    height: var(--footer-height);
+    background-color: var(--color-background-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--color-text-secondary);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 20; /* 确保在其他内容之上 */
+    flex-shrink: 0; /* 防止页脚被挤压变小 */
+}
+
+/* --- Map.html 或地图相关组件样式 (如果你的项目中有地图页面) --- */
+/* 这些样式可能不会在 index.html 中生效，但为了你的项目完整性保留 */
 .map-viewport {
     position: relative;
     width: 100%;
@@ -83,6 +272,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1; /* 允许它在flex容器中增长 */
 }
 
 .map-canvas {
@@ -321,19 +511,8 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.footer {
-    width: 100%;
-    height: var(--footer-height);
-    background-color: var(--color-background-secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9em;
-    color: var(--color-text-secondary);
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 20;
-}
 
+/* --- 媒体查询（响应式设计）--- */
 @media (max-width: 768px) {
     .navbar {
         padding: 0 10px;
@@ -348,224 +527,6 @@ a:hover {
         font-size: 1.4em;
     }
 
-    .navbar-links {
-        display: none;
-    }
-
-    .map-info {
-        width: calc(100% - 40px);
-        top: auto;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        max-height: 50%;
-    }
-
-    .map-legend {
-        bottom: auto;
-        top: 80px;
-        left: 20px;
-        right: auto;
-        width: calc(100% - 40px);
-        max-width: none;
-    }
-
-    .map-overlay {
-        top: 70px;
-        left: 10px;
-        right: 10px;
-        width: auto;
-        text-align: center;
-    }
-
-    .footer {
-        font-size: 0.8em;
-    }
-}
-
-@media (max-width: 480px) {
-    .map-info {
-        padding: 15px;
-    }
-
-    .map-info-title #title {
-        font-size: 1.3em;
-    }
-
-    .map-info p {
-        font-size: 0.9em;
-    }
-
-    .map-legend {
-        padding: 10px;
-        font-size: 0.85em;
-    }
-
-    .map-legend h4 {
-        font-size: 1em;
-    }
-}
-
-.main-container {
-    flex-grow: 1;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - var(--navbar-height) - var(--footer-height));
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.hero-overlay {
-    position: relative;
-    z-index: 2;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: var(--border-radius);
-    max-width: 800px;
-    margin: 20px;
-    box-sizing: border-box;
-}
-
-.hero-title {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: var(--color-text-primary);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-subtitle {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: var(--color-text-secondary);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.lang-selector-container {
-    margin-top: 20px;
-}
-
-#langSelector {
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
-    background-color: var(--color-background-secondary);
-    color: var(--color-text-primary);
-    border: 1px solid var(--color-primary);
-    font-size: 1em;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23dddddd%22%20d%3D%22M6%209l-4-4h8l-4%204z%22%2F%3E%3C%2Fsvg%3E');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    padding-right: 30px;
-}
-
-#langSelector:focus {
-    outline: none;
-    border-color: var(--color-secondary);
-}
-
-.about-section {
-    padding: 40px 20px;
-    background-color: var(--color-background-primary);
-    color: var(--color-text-primary);
-    line-height: 1.6;
-    text-align: justify;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
-
-.about-section h2 {
-    font-size: 2em;
-    color: var(--color-primary);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.about-section p {
-    margin-bottom: 15px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-article {
-    background-color: var(--color-background-secondary);
-    padding: 25px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-}
-
-.about-article h3 {
-    color: var(--color-primary);
-    font-size: 1.5em;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.about-article ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.about-article ul li {
-    margin-bottom: 8px;
-    display: flex;
-    align-items: flex-start;
-}
-
-.about-article ul li::before {
-    content: '•';
-    color: var(--color-primary);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-    flex-shrink: 0;
-}
-
-.navbar-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    color: var(--color-text-primary);
-    cursor: pointer;
-    margin-left: auto;
-    padding: 5px;
-}
-
-@media (max-width: 768px) {
     .navbar-toggle {
         display: block;
     }
@@ -616,6 +577,36 @@ a:hover {
     .about-article {
         padding: 20px;
     }
+
+    .map-info {
+        width: calc(100% - 40px);
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        max-height: 50%;
+    }
+
+    .map-legend {
+        bottom: auto;
+        top: 80px;
+        left: 20px;
+        right: auto;
+        width: calc(100% - 40px);
+        max-width: none;
+    }
+
+    .map-overlay {
+        top: 70px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        text-align: center;
+    }
+
+    .footer {
+        font-size: 0.8em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -624,6 +615,27 @@ a:hover {
     }
 
     .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .map-info {
+        padding: 15px;
+    }
+
+    .map-info-title #title {
+        font-size: 1.3em;
+    }
+
+    .map-info p {
+        font-size: 0.9em;
+    }
+
+    .map-legend {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    .map-legend h4 {
         font-size: 1em;
     }
 }
