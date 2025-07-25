@@ -101,7 +101,6 @@ a:hover {
     padding: 0 20px; /* 左右内边距，避免内容紧贴边缘 */
     display: flex; /* 启用Flexbox布局 */
     flex-direction: column; /* 子元素垂直堆叠 */
-    /* overflow: hidden; /* 这里通常不需要，让子元素自身处理溢出 */ */
 }
 
 /* 英雄区：包含背景图片和叠加文本 */
@@ -532,7 +531,7 @@ a:hover {
     }
 
     .navbar-links {
-        display: none;
+        display: none; /* 默认隐藏链接 */
         flex-direction: column;
         position: absolute;
         top: var(--navbar-height);
