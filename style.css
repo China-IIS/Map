@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
 
+:root {
+    --navbar-height: 88px;
+    --footer-combined-height: 190px;
+}
+
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* GFW<- FUCK YOU AND YOUR ALLS */
+    overflow: hidden;
 }
 
 body {
     background-color: hsl(0deg, 12%, 5%);
     font-family: 'Manrope', sans-serif;
     display: flex;
-    flex-direction: column; 
-    min-height: 100vh; 
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .main {
@@ -21,8 +26,9 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-height: 0; 
+    min-height: 0;
     overflow-x: hidden;
+    min-height: calc(100vh - var(--navbar-height) - var(--footer-combined-height));
 }
 
 .navbar {
@@ -36,7 +42,7 @@ body {
     right: 0px;
     gap: 30px;
     z-index: 999;
-    height: 88px;
+    height: var(--navbar-height);
 }
 
 .navbar.list-open {
@@ -143,10 +149,9 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    flex: 1; 
-    min-height: 0; 
-    padding-top: 88px;
-
+    flex: 1;
+    min-height: 0;
+    padding-top: var(--navbar-height);
 }
 
 .background-image {
@@ -282,8 +287,8 @@ body {
     flex-direction: column;
     padding: 0px 80px;
     color: white;
-    flex: 1; /* 让 page-content 占据 page 的所有可用垂直空间 */
-    min-height: 0; /* 允许 page-content 收缩 */
+    flex: 1;
+    min-height: 0;
 }
 
 .page-content.no-padding {
@@ -294,8 +299,8 @@ body {
     background-color: hsl(0deg, 12%, 10%);
     padding: 20px 60px;
     padding-bottom: 40px;
-    flex: 1; /* 让 page-center 占据 page-content 的所有可用垂直空间 */
-    min-height: 0; /* 允许 page-center 收缩 */
+    flex: 1;
+    min-height: 0;
     display: flex;
     flex-direction: column;
 }
@@ -604,7 +609,6 @@ body {
     background-color: var(--color);
 }
 
-/* 页脚样式保持不变，因为它们在 style.css 中 */
 .footer {
     padding: 50px 80px 30px;
     background-color: hsl(0deg, 12%, 6%);
