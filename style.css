@@ -1,4 +1,4 @@
-@import url('https://web.archive.org/web/20240111025233cs_/https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
 
 html, body {
     width: 100%;
@@ -59,7 +59,7 @@ body {
     .navbar-buttons {
         display: none;
     }
-    
+
     .navbar {
         position: absolute;
     }
@@ -139,6 +139,8 @@ body {
     flex-direction: column;
     position: relative;
     flex: 1;
+    /* 确保页面内容有足够的最小高度 */
+    min-height: calc(100vh - 88px - 140px); /* 100vh - 导航栏高度 - 页脚高度，根据实际调整 */
 }
 
 .background-image {
@@ -147,6 +149,11 @@ body {
     z-index: -2;
     filter: brightness(0.8);
     background-attachment: fixed;
+    /* 确保背景图片覆盖整个页面区域，并且不受内容挤压影响 */
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
 }
 
 @media (max-width: 900px) {
@@ -211,7 +218,7 @@ body {
         font-size: 40px;
         text-shadow: 0px 0px 10px #000000;
     }
-    
+
     .home-top-subtitle {
         font-size: 28px;
         text-shadow: 0px 0px 8px #000000;
@@ -272,6 +279,8 @@ body {
     padding: 0px 80px;
     color: white;
     flex: 1;
+    /* 确保内容区域有足够的最小高度，以容纳地图 */
+    min-height: 500px;
 }
 
 .page-content.no-padding {
@@ -283,6 +292,8 @@ body {
     padding: 20px 60px;
     padding-bottom: 40px;
     flex: 1;
+    /* 确保 page-center 也有足够的最小高度 */
+    min-height: 400px;
 }
 
 @media (max-width: 800px) {
@@ -353,11 +364,18 @@ body {
     display: flex;
     position: relative;
     flex: 1;
+    /* 确保 map-viewport 有一个明确的高度，以包含其绝对定位的子元素 */
+    height: 720px; /* 使用 canvas 的默认高度，或根据需要调整 */
+    overflow: hidden;
 }
 
 .map-canvas {
     background-color: rgb(48, 48, 48);
-    position: absolute;
+    /* 移除 position: absolute; 让其回到文档流中，占用空间 */
+    /* 或者如果 map.js 确实需要它绝对定位，则需要额外设置 top/left/width/height */
+    /* 暂时移除 absolute，让它正常显示。如果map.js需要特殊定位，我们再加回来。 */
+    /* width: 100%; height: 100%; */
+    display: block;
 }
 
 .map-info {
@@ -534,7 +552,7 @@ body {
         pointer-events: none;
         padding: 0;
     }
-    
+
     .map-legend-entry {
         font-size: 15px;
     }
@@ -664,23 +682,3 @@ body {
         gap: 20px;
     }
 }
-/*
-     FILE ARCHIVED ON 02:52:33 Jan 11, 2024 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 08:06:11 Jul 25, 2025.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 0.702
-  exclusion.robots: 0.029
-  exclusion.robots.policy: 0.015
-  esindex: 0.015
-  cdx.remote: 6.886
-  LoadShardBlock: 154.04 (3)
-  PetaboxLoader3.datanode: 98.845 (4)
-  PetaboxLoader3.resolve: 102.924 (2)
-  load_resource: 57.912
-*/
