@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地图 - China IIS</title>
-    
+
     <meta name="description" content="2b2t.XIN服务器上Independent Interstate Society修建的统计">
     <meta name="keywords" content="2b2t, minecraft, group, highway, nether, hwu, meg, mcg, iis, 2b2t.xin, map">
     <meta property="og:image" content="logo.png">
@@ -17,12 +17,15 @@
     <meta name="google" content="nositelinkssearchbox">
     <meta name="googlebot" content="notranslate">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="font/style.css"> <script src="jquery-3.6.3.min.js"></script>
-</head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font/style.css">
+    <script src="jquery-3.6.3.min.js"></script>
+    </head>
 <body style="overflow-x: hidden;">
-    <div class="main"> <div class="navbar" id="navbar"> <a class="navbar-logo-link" href="index.html">
+    <div class="main">
+        <div class="navbar" id="navbar">
+            <a class="navbar-logo-link" href="index.html">
                 <img class="navbar-logo" src="navbar_logo.png" alt="Independent Interstate Society Logo">
             </a>
             <div style="border-color: transparent;" class="navbar-button-border icon" id="bars-border">
@@ -46,30 +49,31 @@
             </div>
         </div>
 
-        <div class="page"> <img class="background-image offset" src="background_fx.jpg" alt="地图页面背景图片"> 
-            
+        <div class="page">
+            <img class="background-image offset" src="background_fx.jpg" alt="地图页面背景图片">
+
             <div class="page-heading padded">
                 <div class="page-heading-text">
                     地图
                 </div>
             </div>
-            
+
             <div class="page-content">
                 <div class="page-center">
                     <div class="map-viewport" id="viewport">
                         <canvas class="map-canvas" id="canvas" width="1280" height="720">您的浏览器不支持Canvas 2D</canvas>
-                        
+
                         <div class="map-overlay">
                             <p id="coords">下界 XZ: 0, 0</p>
                             <p id="ow-coords">(主世界 XZ: 0, 0)</p>
                         </div>
 
-                        <div class="map-info" id="info"> 
+                        <div class="map-info" id="info">
                             <button id="info-close" class="map-info-close">
                                 <img src="xmark-solid.svg" alt="关闭">
                             </button>
                             <div class="map-info-title">
-                                <div id="marker-icon"></div> 
+                                <div id="marker-icon"></div>
                                 <div id="hwicon"></div>
                                 <h3 id="title">高速公路</h3>
                             </div>
@@ -80,10 +84,10 @@
                             <p><span id="date-name"></span><span id="date-value" class="value"></span></p>
                             <p><span id="desc-name"></span><span id="desc-value" class="value"></span></p>
                             <p><span id="video-name"></span><span id="video-value" class="value"></span></p>
-                            
+
                             <button id="new-blockage">报告阻塞</button>
 
-                            <div class="map-info-form" id="input-form"> 
+                            <div class="map-info-form" id="input-form">
                                 <label for="input-title" class="map-info-name">标题</label>
                                 <input class="map-info-input" type="text" id="input-title">
                                 <label for="input-user" class="map-info-name">不一致标签/游戏中用户名</label>
@@ -123,8 +127,9 @@
                 </div>
             </div>
         </div>
-        
-        <div class="footer"> <div class="footer-logos">
+
+        <div class="footer">
+            <div class="footer-logos">
                 <a href="index.html" aria-label="IIS主页"><img src="logo_gray.png" alt="IIS标志"></a>
                 <a href="https://discord.gg/bAD6Znhh" target="_blank" rel="noopener noreferrer"><img src="logo_meg.png" alt="MEG标志"></a>
                 <a href="https://discord.gg/gjMaFssx" target="_blank" rel="noopener noreferrer"><img src="logo_mcg.png" alt="MCG标志"></a>
@@ -146,11 +151,12 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom"> <div class="footer-bottom-left">IIS高速公路组织与Mojang,微软,2B2T.XIN服务器亦无从属关系</div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">IIS高速公路组织与Mojang,微软,2B2T.XIN服务器亦无从属关系</div>
             <div class="footer-bottom-right">此网站由Highways2b2t.net修改而来</div>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
     <script src="lang.js"></script>
     <script src="map.js"></script>
