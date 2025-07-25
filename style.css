@@ -5,6 +5,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden; /* 重新添加此属性，以防止不必要的滚动条 */
 }
 
 body {
@@ -411,8 +412,8 @@ body {
     margin-top: 0;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
 }
 
 .map-info-marker {
