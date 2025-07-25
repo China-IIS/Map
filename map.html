@@ -27,8 +27,10 @@
             <a href="index.html" class="navbar-logo-link">
                 <img src="navbar_logo.png" alt="网站Logo" class="navbar-logo">
             </a>
-            <h1 class="navbar-title">IIS</h1> <nav class="navbar-links">
-                <a href="index.html" class="navbar-button">主页</Sa>
+            <h1 class="navbar-title">China IIS</h1> 
+            
+            <nav class="navbar-links">
+                <a href="index.html" class="navbar-button">主页</a>
                 <a href="map.html" class="navbar-button selected">高速公路地图</a>
                 <a href="stats.html" class="navbar-button">统计资料</a>
                 <a href="projects.html" class="navbar-button">我们的项目</a>
@@ -60,6 +62,11 @@
             <div class="map-viewport" id="viewport">
                 <canvas class="map-canvas" id="canvas" width="1280" height="720">您的浏览器不支持Canvas 2D</canvas>
                 
+                <div class="map-overlay">
+                    <p id="coords">下界 XZ: 0, 0</p>
+                    <p id="ow-coords">(主世界 XZ: 0, 0)</p>
+                </div>
+
                 <div class="map-info" id="info"> 
                     <button id="info-close" class="map-info-close">
                         <img src="xmark-solid.svg" alt="关闭">
@@ -78,7 +85,9 @@
                     <p><span id="desc-name"></span><span id="desc-value" class="value"></span></p>
                     <p><span id="video-name"></span><span id="video-value" class="value"></span></p>
                     
-                    <button id="new-blockage">报告阻塞</button> <div class="map-info-form" id="input-form"> 
+                    <button id="new-blockage">报告阻塞</button>
+
+                    <div class="map-info-form" id="input-form"> 
                         <label for="input-title" class="map-info-name">标题</label>
                         <input class="map-info-input" type="text" id="input-title">
                         <label for="input-user" class="map-info-name">不一致标签/游戏中用户名</label>
