@@ -37,22 +37,20 @@ const STATES = {
     }
 }
 
-/* Credits to Joshua at StackOverflow
-   https://stackoverflow.com/a/6853926 */
 function pDistanceSqrd(x, y, x1, y1, x2, y2) {
     let A = x - x1;
     let B = y - y1;
     let C = x2 - x1;
     let D = y2 - y1;
-  
+ 
     let dot = A * C + B * D;
     let len_sq = C * C + D * D;
     let param = -1;
-    if (len_sq != 0) //in case of 0 length line
+    if (len_sq != 0)
         param = dot / len_sq;
-  
+ 
     let xx, yy;
-  
+ 
     if (param < 0) {
       xx = x1;
       yy = y1;
@@ -65,7 +63,7 @@ function pDistanceSqrd(x, y, x1, y1, x2, y2) {
       xx = x1 + param * C;
       yy = y1 + param * D;
     }
-  
+ 
     let dx = x - xx;
     let dy = y - yy;
     return dx * dx + dy * dy;
@@ -182,7 +180,7 @@ class MapInfo {
         this.icon   = this.elem.find('#marker-icon');
         this.hwicon = this.elem.find('#hwicon');
         
-        this.coordName  = this.elem.find('#coord-name');
+        this.coordName    = this.elem.find('#coord-name');
         this.coordValue = this.elem.find('#coord-value');
         this.toName     = this.elem.find('#to-name');
         this.toValue    = this.elem.find('#to-value');
@@ -604,8 +602,6 @@ class Map {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.cam.setSize(this.canvas.width, this.canvas.height);
 
-        //this.ctx.fillStyle = "#573333";
-        //this.ctx.fillRect(...this.cam.toScreen(-30_00_000, 30_00_000), this.cam.scale(60_00_000), this.cam.scale(60_00_000));
         this.ctx.fillStyle = "#562A2A";
         this.ctx.fillRect(...this.cam.toScreen(-3_750_000, -3_750_000), this.cam.scale(7_500_000), this.cam.scale(7_500_000));
 
@@ -662,7 +658,7 @@ class Map {
 
         let prevHovered = this.hoveredHighway;
 
-        this.hoveredHighway  = null;
+        this.hoveredHighway   = null;
         this.hoveredMonument = null;
 
         for (let i = 0; i < this.monuments.length; i++) {
@@ -720,12 +716,6 @@ class Map {
                 }
             }
 
-            /*this.marker = this.cam.toWorld(x, y);
-            this.selectedBlockage = null;
-            this.selectedHighway  = null;
-
-            this.info.setMarker(...this.marker);*/
-
             this.info.close();
         }
 
@@ -737,17 +727,17 @@ class Map {
         let zoomB = zoomA * (multiply ? z : Math.pow(2, -z / 100 * ZOOM_SENSIVITY));
         zoomB = Math.min(0.4, Math.max(zoomB, 0.00002))
 
-        let width  = this.cam.width;
+        let width    = this.cam.width;
         let height = this.cam.height;
         let camX   = this.cam.x;
         let camY   = this.cam.y;
 
         let diff = 1 / zoomA - 1 / zoomB;
 
-        let offX = width  * diff;
+        let offX = width    * diff;
         let offY = height * diff;
 
-        offX = -offX / 2 + (x / width)  * offX;
+        offX = -offX / 2 + (x / width)   * offX;
         offY = -offY / 2 + (y / height) * offY;
 
         this.cam.x = camX + offX;
@@ -776,13 +766,13 @@ class Map {
         this.marker = null;
         this.selectedBlockage = null;
 
-        this.hoveredMonument  = null;
+        this.hoveredMonument   = null;
         this.selectedMonument = null;
         
         this.hoveredHighway = null;
         this.selectedHighway = null;
 
-        this.blockages = [];//await serverApi.getBlockages();
+        this.blockages = [];
 
         this.monuments = await serverApi.getMonuments();
 
@@ -808,12 +798,12 @@ let mouseHoldMove = 0;
 
 function clearSelections() {
     if (window.getSelection) {
-        if (window.getSelection().empty) {  // Chrome
+        if (window.getSelection().empty) {
             window.getSelection().empty();
-        } else if (window.getSelection().removeAllRanges) {  // Firefox
+        } else if (window.getSelection().removeAllRanges) {
             window.getSelection().removeAllRanges();
         }
-    } else if (document.selection) {  // IE?
+    } else if (document.selection) {
         document.selection.empty();
     }
 }
@@ -908,7 +898,7 @@ window.addEventListener('load', async () => {
 
             let len = Math.sqrt(Math.pow(touches[0].x - touches[1].x, 2) + Math.pow(touches[0].y - touches[1].y, 2));
             
-             if (lastTouchLength != null)
+            if (lastTouchLength != null)
                 map.zoom(len / lastTouchLength, centerX, centerY, true);
 
             lastTouchLength = len;
