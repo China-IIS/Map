@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="2b2t.XIN服务器上负责建设和维护下界高速公路的2b2t组织。">
     <meta name="keywords" content="2b2t, minecraft, group, highway, nether, hwu, meg, mcg, iis, 2b2t.xin">
     <meta property="og:image" content="logo.png">
@@ -10,113 +11,119 @@
     <meta property="og:description" content="2b2t.XIN服务器上负责建设和维护下界高速公路的2b2t组织。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://highways2b2t.xin/" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <meta name="theme-color" content="#BF1E2E">
     <meta name="google" content="nositelinkssearchbox">
     <meta name="googlebot" content="notranslate">
-
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font/style.css"> 
+    
     <title>Independent Interstate Society</title>
 </head>
 <body>
-    <header class="navbar" id="navbar">
-        <a class="navbar-logo-link" href="index.html" aria-label="主页">
-            <img class="navbar-logo" src="navbar_logo.png" alt="Independent Interstate Society Logo">
-        </a>
-        <h1 class="navbar-title">China IIS</h1> 
-        <button class="navbar-button-border icon" id="navbar-toggle" aria-label="切换导航菜单">
-            <img src="bars.svg" alt="菜单图标"> 
-        </button>
-        <nav class="navbar-buttons" id="navbar-links"> 
-            <a href="map.html" class="navbar-button" data-i18n="Map">高速公路地图</a>
-            <a href="https://discord.gg/NQGqFXCjda" target="_blank" rel="noopener noreferrer" class="navbar-button" data-i18n="Discord">加入Discord</a>
-            <a href="stats.html" class="navbar-button" data-i18n="Statistics">统计资料</a>
-            <a href="projects.html" class="navbar-button" data-i18n="Project">我们的项目</a>
-            <div class="navbar-language-selector">
-                <label for="langSelector" class="sr-only">选择语言</label> 
-                <select id="langSelector" class="navbar-button">
-                    <option value="en">English</option>
-                    <option value="zh-TW">繁體中文</option>
-                    <option value="zh-CN">简体中文</option>
-                </select>
+    <div class="main">
+        <div class="navbar" id="navbar">
+            <a class="navbar-logo-link" href="index.html">
+                <img class="navbar-logo" src="navbar_logo.png" alt="Independent Interstate Society Logo">
+            </a>
+            <div style="border-color: transparent;" class="navbar-button-border icon" id="bars-border">
+                <img src="bars.svg" class="navbar-button icon" id="navbar-bars" alt="菜单图标">
             </div>
-        </nav>
-    </header>
+            <div class="navbar-buttons">
+                <a href="map.html" class="navbar-button">高速公路地图</a>
+                <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button" rel="noopener noreferrer">加入Discord</a>
+                <a href="stats.html" class="navbar-button">统计资料</a>
+                <a href="projects.html" class="navbar-button">我们的项目</a>
+                <div class="navbar-language-selector">
+                    <label for="langSelector" class="sr-only">选择语言</label>
+                    <select id="langSelector" class="navbar-button">
+                        <option value="en">English</option>
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="zh-CN">简体中文</option>
+                    </select>
+                </div>
+            </div>
+        </div>
 
-    <div class="main"> 
-        <section class="home-top">
+        <div class="page">
             <img class="background-image" src="background.png" alt="Minecraft Nether highway background image">
-            <div class="home-top-center">
-                <h1 class="home-top-title">Independent Interstate Society</h1> 
-                <p class="home-top-subtitle">构建和维护下界高速公路的2B2T组织</p>
-                <a target="_blank" href="https://www.reddit.com/r/2b2t/comments/ua1pda/2b2t_nether_showing_hwu_logo_march_2022/" class="home-top-source" rel="noopener noreferrer">Render by Cooper</a> 
+            
+            <div class="home-top">
+                <div class="home-top-center">
+                    <div class="home-top-title">Independent Interstate Society</div>
+                    <div class="home-top-subtitle">构建和维护下界高速公路的2B2T组织</div>
+                </div>
+                <a target="_blank" href="https://www.reddit.com/r/2b2t/comments/ua1pda/2b2t_nether_showing_hwu_logo_march_2022/" class="home-top-source" rel="noopener noreferrer">Render by Cooper</a>
             </div>
-        </section>
 
-        <section class="page-heading padded"> 
-            <h2 class="page-heading-text">关于我们</h2> 
-        </section>
-
-        <section class="page-content">
-            <div class="page-center">
-                <h1>什么是IIS?</h1>
-                <p>
-                    IIS是负责建设和维护 2B2T.XIN服务器 下界高速公路的组织.
-                    我们规划、挖掘、铺设和维护许多玩家每天使用的下界高速公路.
-                </p>
-                <h1>我可以加入IIS吗?</h1>
-                <p>
-                    想加入我们, 请加入我们的QQ交流群 <a href="https://qm.qq.com/q/cyYeETfiIU" target="_blank" rel="noopener noreferrer">499466534</a> 审核后加入.
-                </p>
-                <p>
-                    我们持续招收成员, 以下是我们的要求:
-                </p>
-                <ul>
-                    <li>至少400K下界岩挖掘量(在游戏内统计资料查看)</li>
-                    <li>具备可长时间在线的条件和意愿</li>
-                    <li>熟悉2b2t环境, 会使用外挂</li>
-                </ul>
-                <h1>我无法到达公路施工地点, 可以做什么?</h1>
-                <p>
-                    清理、修复高速公路, 扩建下界天花板.
-                </p>
-                <h1>高速公路位于哪里?</h1>
-                <p>
-                    您可以在我们的 <a href="/map.html">Map</a>上找到下界高速公路位置. 它们始终位于 Y 高度 119 或 120,具体取决于它是否被铺砌.
-                </p>
+            <div class="page-heading">
+                <div class="page-heading-text">
+                    关于我们
+                </div>
             </div>
-        </section>
-    </div>
 
-    <footer class="footer">
-        <div class="footer-lists"> 
-            <div class="footer-list">
-                <h4 class="footer-list-title">更多页面</h4>
-                <ul>
-                    <li><a class="footer-list-option" href="index.html">主页</a></li>
-                    <li><a class="footer-list-option" href="map.html">地图</a></li>
-                    <li><a class="footer-list-option" href="stats.html">统计</a></li>
-                    <li><a class="footer-list-option" href="projects.html">项目</a></li>
-                </ul>
+            <div class="page-content">
+                <div class="page-center">
+                    <h1>什么是IIS?</h1>
+                    <p>
+                        IIS是负责建设和维护 2B2T.XIN服务器 下界高速公路的组织.
+                        我们规划、挖掘、铺设和维护许多玩家每天使用的下界高速公路.
+                    </p>
+                    <h1>我可以加入IIS吗?</h1>
+                    <p>
+                        想加入我们, 请加入我们的QQ交流群 <a href="https://qm.qq.com/q/cyYeETfiIU" target="_blank" rel="noopener noreferrer">499466534</a> 审核后加入.
+                    </p>
+                    <p>
+                        我们持续招收成员, 以下是我们的要求:
+                    </p>
+                    <ul>
+                        <li>至少400K下界岩挖掘量(在游戏内统计资料查看)</li>
+                        <li>具备可长时间在线的条件和意愿</li>
+                        <li>熟悉2b2t环境, 会使用外挂</li>
+                    </ul>
+                    <h1>我无法到达公路施工地点, 可以做什么?</h1>
+                    <p>
+                        清理、修复高速公路, 扩建下界天花板.
+                    </p>
+                    <h1>高速公路位于哪里?</h1>
+                    <p>
+                        您可以在我们的 <a href="map.html">Map</a>上找到下界高速公路位置. 它们始终位于 Y 高度 119 或 120,具体取决于它是否被铺砌.
+                    </p>
+                </div>
             </div>
-            <div class="footer-list">
-                <h4 class="footer-list-title">找到我们</h4>
-                <ul>
-                    <li><a class="footer-list-option" href="https://discord.gg/NQGqFXCjda" target="_blank" rel="noopener noreferrer">Discord</a></li>
-                    <li><a class="footer-list-option" href="https://qm.qq.com/q/cyYeETfiIU" target="_blank" rel="noopener noreferrer">QQ群</a></li>
-                    <li><a class="footer-list-option" href="https://t.me/+RKI5vdRkPrY1MTg9" target="_blank" rel="noopener noreferrer">Telegram</a></li>
-                    <li><a class="footer-list-option" href="https://github.com/China-IIS" target="_blank" rel="noopener noreferrer">Github</a></li>
-                </ul>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-logos">
+                <a href="index.html"><img src="logo_gray.png" alt="Independent Interstate Society Logo"></a>
+                <a href="https://discord.gg/aXmhqAXJz3" target="_blank" rel="noopener noreferrer"><img src="logo_meg.png" alt="MEG Logo"></a>
+                <a href="https://discord.com/invite/jH9w634vZf" target="_blank" rel="noopener noreferrer"><img src="logo_mcg.png" alt="MCG Logo"></a>
+            </div>
+            <div class="footer-lists">
+                <div class="footer-list">
+                    <div class="footer-list-title">更多页面</div>
+                    <a class="footer-list-option" href="index.html">主页</a>
+                    <a class="footer-list-option" href="map.html">地图</a>
+                    <a class="footer-list-option" href="stats.html">统计</a>
+                    <a class="footer-list-option" href="projects.html">项目</a>
+                </div>
+                <div class="footer-list">
+                    <div class="footer-list-title">找到我们</div>
+                    <a class="footer-list-option" href="https://discord.gg/NQGqFXCjda" target="_blank" rel="noopener noreferrer">Discord</a>
+                    <a class="footer-list-option" href="https://qm.qq.com/q/cyYeETfiIU" target="_blank" rel="noopener noreferrer">QQ群</a>
+                    <a class="footer-list-option" href="https://t.me/+RKI5vdRkPrY1MTg9" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    <a class="footer-list-option" href="https://github.com/China-IIS" target="_blank" rel="noopener noreferrer">Github</a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p class="footer-disclaimer">IIS高速公路组织与Mojang,微软,2B2T.XIN服务器亦无从属关系</p>
-            <p class="footer-location">我们活跃于中国2B2T.XIN服务器</p>
-            <p class="footer-credit">此网站由Highways2b2t.net修改而来</p>
+            <div class="footer-bottom-left">IIS高速公路组织与Mojang,微软,2B2T.XIN服务器亦无从属关系</div>
+            <div class="footer-bottom-right">此网站由Highways2b2t.net修改而来</div>
         </div>
-    </footer>
-
-    <script src="script.js" defer></script>
-    <script src="lang.js" defer></script>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="lang.js"></script>
 </body>
 </html>
