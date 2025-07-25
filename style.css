@@ -3,19 +3,23 @@
 html, body {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: hsl(0deg, 12%, 5%);
-    margin: 0;
     font-family: 'Manrope', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    flex: 1;
+    min-height: 0;
     overflow-x: hidden;
 }
 
@@ -30,6 +34,7 @@ body {
     right: 0px;
     gap: 30px;
     z-index: 999;
+    height: 88px;
 }
 
 .navbar.list-open {
@@ -97,7 +102,6 @@ body {
     align-items: center;
     text-align: center;
     padding-bottom: 3px;
-    /* transition: background-color ease-in 0.05s; */
 }
 
 .list-open .navbar-button {
@@ -131,7 +135,6 @@ body {
 
 .navbar-button:hover, .navbar-button.selected {
     background-color: #9f0000;
-    /* border-color: rgb(255, 141, 141); */
 }
 
 .page {
@@ -139,8 +142,8 @@ body {
     flex-direction: column;
     position: relative;
     flex: 1;
-    /* 确保页面内容有足够的最小高度 */
-    min-height: calc(100vh - 88px - 140px); /* 100vh - 导航栏高度 - 页脚高度，根据实际调整 */
+    min-height: 0;
+    padding-top: 88px;
 }
 
 .background-image {
@@ -149,7 +152,6 @@ body {
     z-index: -2;
     filter: brightness(0.8);
     background-attachment: fixed;
-    /* 确保背景图片覆盖整个页面区域，并且不受内容挤压影响 */
     height: 100%;
     object-fit: cover;
     top: 0;
@@ -256,7 +258,6 @@ body {
 }
 
 .page-heading.padded {
-    margin-top: 88px;
 }
 
 .page-heading-text {
@@ -279,8 +280,7 @@ body {
     padding: 0px 80px;
     color: white;
     flex: 1;
-    /* 确保内容区域有足够的最小高度，以容纳地图 */
-    min-height: 500px;
+    min-height: 0;
 }
 
 .page-content.no-padding {
@@ -292,8 +292,9 @@ body {
     padding: 20px 60px;
     padding-bottom: 40px;
     flex: 1;
-    /* 确保 page-center 也有足够的最小高度 */
-    min-height: 400px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 800px) {
@@ -364,17 +365,17 @@ body {
     display: flex;
     position: relative;
     flex: 1;
-    /* 确保 map-viewport 有一个明确的高度，以包含其绝对定位的子元素 */
-    height: 720px; /* 使用 canvas 的默认高度，或根据需要调整 */
+    min-height: 500px;
     overflow: hidden;
 }
 
 .map-canvas {
     background-color: rgb(48, 48, 48);
-    /* 移除 position: absolute; 让其回到文档流中，占用空间 */
-    /* 或者如果 map.js 确实需要它绝对定位，则需要额外设置 top/left/width/height */
-    /* 暂时移除 absolute，让它正常显示。如果map.js需要特殊定位，我们再加回来。 */
-    /* width: 100%; height: 100%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: block;
 }
 
