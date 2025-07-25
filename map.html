@@ -19,23 +19,21 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="font/style.css"> 
-    
     <script src="jquery-3.6.3.min.js"></script>
-    <script src="map.js"></script>
-</head>
-<body style="overflow-x: hidden;"> <div class="main-container">
+    </head>
+<body style="overflow-x: hidden;">
+    <div class="main-container">
         <header class="navbar" id="navbar">
             <a href="index.html" class="navbar-logo-link">
                 <img src="navbar_logo.png" alt="网站Logo" class="navbar-logo">
             </a>
-            
-            <nav class="navbar-links">
-                <a href="index.html" class="navbar-button">主页</a>
+            <h1 class="navbar-title">IIS</h1> <nav class="navbar-links">
+                <a href="index.html" class="navbar-button">主页</Sa>
                 <a href="map.html" class="navbar-button selected">高速公路地图</a>
                 <a href="stats.html" class="navbar-button">统计资料</a>
                 <a href="projects.html" class="navbar-button">我们的项目</a>
-                <a href="#" class="navbar-button">找到我们</a> <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button">Discord</a>
+                <a href="#" class="navbar-button">找到我们</a>
+                <a href="https://discord.gg/NQGqFXCjda" target="_blank" class="navbar-button">Discord</a>
                 <a href="https://jq.qq.com/?_wv=1027&k=your-qq-group-key" target="_blank" class="navbar-button">QQ Group</a>
                 <a href="https://t.me/your-telegram-link" target="_blank" class="navbar-button">Telegram</a>
                 <a href="https://github.com/your-github-repo" target="_blank" class="navbar-button">Github</a>
@@ -54,44 +52,38 @@
             </button>
         </header>
 
-        <main class="page-content-wrapper">
+        <main class="main-content">
             <div class="page-heading padded">
                 <h1 class="page-heading-text">MAP</h1>
             </div>
             
             <div class="map-viewport" id="viewport">
                 <canvas class="map-canvas" id="canvas" width="1280" height="720">您的浏览器不支持Canvas 2D</canvas>
-                <div class="map-info" id="info" style="display: none;">
-                    <img id="info-close" class="map-info-close" src="xmark-solid.svg" alt="关闭">
+                
+                <div class="map-info" id="info"> 
+                    <button id="info-close" class="map-info-close">
+                        <img src="xmark-solid.svg" alt="关闭">
+                    </button>
                     <div class="map-info-title">
-                        <div class="map-info-marker" id="marker-icon"></div>
-                        <div class="map-info-highway" id="hwicon" style="--color: hsl(9deg, 85%, 40%); display: none;">
-                            <div class="hwicon-back-x"></div>
-                            <div class="hwicon-back-z"></div>
-                            <div class="hwicon-front-x"></div>
-                            <div class="hwicon-front-z"></div>
-                        </div>
-                        <div id="title">高速公路</div>
+                        <div id="marker-icon"></div> 
+                        <div id="hwicon"> 
+                            </div>
+                        <h3 id="title">高速公路</h3>
                     </div>
-                    <div class="map-info-subtitle" id="subtitle"></div>
-                    <div class="map-info-name" id="user-name">提交者</div>
-                    <div class="map-info-value" id="user-value"></div>
-                    <div class="map-info-name" id="date-name">日期</div>
-                    <div class="map-info-value" id="date-value"></div>
-                    <div class="map-info-name" id="desc-name">描述</div>
-                    <div class="map-info-value" id="desc-value"></div>
-                    <div class="map-info-name" id="coord-name">坐标</div>
-                    <div class="map-info-value" id="coord-value"></div>
-                    <div class="map-info-name" id="video-name">视频(使用全屏模式效果更佳)</div>
-                    <div class="map-info-value" id="video-value"></div>
-                    <div class="map-info-name" id="to-name">TO</div>
-                    <div class="map-info-value" id="to-value"></div>
-                    <div class="map-info-form" id="input-form" style="display: none;">
-                        <div class="map-info-name">标题</div>
+                    <p id="subtitle"></p>
+                    <p><span id="coord-name"></span><span id="coord-value" class="value"></span></p>
+                    <p><span id="to-name"></span><span id="to-value" class="value"></span></p>
+                    <p><span id="user-name"></span><span id="user-value" class="value"></span></p>
+                    <p><span id="date-name"></span><span id="date-value" class="value"></span></p>
+                    <p><span id="desc-name"></span><span id="desc-value" class="value"></span></p>
+                    <p><span id="video-name"></span><span id="video-value" class="value"></span></p>
+                    
+                    <button id="new-blockage">报告阻塞</button> <div class="map-info-form" id="input-form"> 
+                        <label for="input-title" class="map-info-name">标题</label>
                         <input class="map-info-input" type="text" id="input-title">
-                        <div class="map-info-name">不一致标签/游戏中用户名</div>
+                        <label for="input-user" class="map-info-name">不一致标签/游戏中用户名</label>
                         <input class="map-info-input" type="text" id="input-user">
-                        <div class="map-info-name">说明</div>
+                        <label for="input-desc" class="map-info-name">说明</label>
                         <textarea class="map-info-input desc" id="input-desc"></textarea>
                         <button class="map-info-submit" id="input-submit">提交阻塞</button>
                     </div>
@@ -128,10 +120,9 @@
         <footer class="footer">
             <div class="footer-top">
                 <div class="footer-logos">
-                    <!--懒得说-->
-                </div>
+                    </div>
                 <div class="footer-links">
-                    <!--这是狗屎-->
+                    </div>
             </div>
             <div class="footer-bottom">
                 <p class="footer-disclaimer">&copy; 2025 Independent Interstate Society</p>
@@ -140,5 +131,6 @@
     </div>
     <script src="script.js"></script>
     <script src="lang.js"></script>
+    <script src="map.js"></script>
 </body>
 </html>
