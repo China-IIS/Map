@@ -5,14 +5,15 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* 重新添加此属性，以防止不必要的滚动条 */
+    overflow: hidden; /* GFW<- FUCK YOU AND YOUR ALLS */
 }
 
 body {
     background-color: hsl(0deg, 12%, 5%);
     font-family: 'Manrope', sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 
 .main {
@@ -20,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-height: 0;
+    min-height: 0; 
     overflow-x: hidden;
 }
 
@@ -142,9 +143,10 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    flex: 1;
-    min-height: 0;
+    flex: 1; 
+    min-height: 0; 
     padding-top: 88px;
+
 }
 
 .background-image {
@@ -280,8 +282,8 @@ body {
     flex-direction: column;
     padding: 0px 80px;
     color: white;
-    flex: 1;
-    min-height: 0;
+    flex: 1; /* 让 page-content 占据 page 的所有可用垂直空间 */
+    min-height: 0; /* 允许 page-content 收缩 */
 }
 
 .page-content.no-padding {
@@ -292,8 +294,8 @@ body {
     background-color: hsl(0deg, 12%, 10%);
     padding: 20px 60px;
     padding-bottom: 40px;
-    flex: 1;
-    min-height: 0;
+    flex: 1; /* 让 page-center 占据 page-content 的所有可用垂直空间 */
+    min-height: 0; /* 允许 page-center 收缩 */
     display: flex;
     flex-direction: column;
 }
@@ -602,6 +604,7 @@ body {
     background-color: var(--color);
 }
 
+/* 页脚样式保持不变，因为它们在 style.css 中 */
 .footer {
     padding: 50px 80px 30px;
     background-color: hsl(0deg, 12%, 6%);
