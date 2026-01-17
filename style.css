@@ -338,6 +338,7 @@ body {
 
 .stats-list {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
@@ -349,7 +350,7 @@ body {
     background-color: hsl(0deg, 12%, 15%);
     padding: 15px 10px;
     border-radius: 5px;
-    flex: 1;
+    flex: 1 0 auto;
     text-align: center;
 }
 
