@@ -10,7 +10,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 body {
@@ -26,8 +26,9 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    overflow-x: hidden;
-    min-height: calc(100vh - var(--navbar-height) - var(--footer-combined-height));
+    min-height: 100vh;
+    /*overflow-x: hidden;*/
+    /*min-height: calc(100vh - var(--navbar-height) - var(--footer-combined-height));*/
 }
 
 .navbar {
