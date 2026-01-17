@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="page">
+        <div class="page" style="height: calc(100vh); overflow: hidden; padding-top: var(--navbar-height); box-sizing: border-box;">
             <img class="background-image offset" src="background_fx.jpg" alt="地图页面背景图片">
 
             <div class="page-heading padded">
@@ -61,9 +61,9 @@
                 </div>
             </div>
 
-            <div class="page-content">
+            <div class="page-content no-padding" style="padding: 0 !important; background: none; display: block; height: 100%;">
                 <div class="page-center">
-                    <div class="map-viewport" id="viewport">
+                    <div class="map-viewport" id="viewport" style="flex: 1; min-height: 0;">
                         <canvas class="map-canvas" id="canvas" width="1280" height="720">您的浏览器不支持Canvas 2D</canvas>
 
                         <div class="map-overlay">
