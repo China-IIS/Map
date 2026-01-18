@@ -66,9 +66,9 @@
                     <div class="map-viewport" id="viewport" style="flex: 1; height: 100%; min-height: 0; position: relative">
                         <canvas class="map-canvas" id="canvas" style="display: block" width=100% height=100%>您的浏览器不支持Canvas 2D</canvas>
 
-                        <div class="map-overlay">
-                            <p id="coords">下界 XZ: 0, 0</p>
-                            <p id="ow-coords">(主世界 XZ: 0, 0)</p>
+                        <div class="map-overlay" style="pointer-events: none;">
+                            <p id="coords">下界坐标: 0, 0</p>
+                            <p id="ow-coords">(主世界坐标: 0, 0)</p>
                         </div>
 
                         <div class="map-info" id="info">
@@ -100,7 +100,7 @@
                                 <button class="map-info-submit" id="input-submit">提交阻塞</button>
                             </div>-->
                         </div>
-                        <div class="map-legend">
+                        <div class="map-legend" style="pointer-events: auto;">
                             <div class="map-legend-entry">
                                 <div class="map-legend-color" style="background-color: hsl(185deg, 85%, 25%);"></div>
                                 计划中
