@@ -228,6 +228,7 @@ class MapInfo {
                     alert(e);
                 });
         });
+        this.elem.hide(); //map-info初始狀態為關閉
     }
 
     setTitle(value) {
