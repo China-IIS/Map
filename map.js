@@ -273,7 +273,7 @@ class MapInfo {
 
     setState(state) {
         if (state) {
-            this.descName.text("STATE");
+            this.descName.text("状态: ");
             this.descValue.text(state.name);
             this.descValue.css('color', '');
             this.descName.show();
@@ -327,7 +327,8 @@ class MapInfo {
 
     setFromTo(from, to) {
         if (from) {
-            this.coordName.text("FROM");
+            this.coordName.text("起点: ");
+            this.toName.text("终点: ");
             this.coordValue.text(from.join(', '));
             this.toValue.text(to.join(', '));
             this.coordName.show();
@@ -375,7 +376,7 @@ class MapInfo {
         this.hwicon.show();
         this.hwicon.css('--color', `hsl(${state.color[0]}deg, ${state.color[1]}%, ${state.color[2]}%)`);
         this.icon.hide();
-        this.setTitle('HIGHWAY');
+        this.setTitle('公路资料');
         this.setSubtitle(highway.name);
         this.setFromTo(highway.from, highway.to);
         this.setState(state);
