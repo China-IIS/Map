@@ -142,14 +142,14 @@ class ServerAPI {
     }
 
     async getHighways() {
-        let res = await fetch('/highways.json');
+        let res = await fetch('highways.json');
         res = await res.text();
 
         return JSON.parse(res.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m));
     }
 
     async getMonuments() {
-        let res = await fetch('/monuments.json');
+        let res = await fetch('monuments.json');
         res = await res.text();
 
         return JSON.parse(res.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m));
